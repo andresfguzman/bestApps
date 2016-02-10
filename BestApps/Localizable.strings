@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  BestApps
+
+  Created by Andres Guzman on 9/02/16.
+  Copyright © 2016 andres. All rights reserved.
+*/
+
+"general_webservice" = "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json";
