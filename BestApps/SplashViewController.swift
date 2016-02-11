@@ -44,6 +44,9 @@ class SplashViewController: UIViewController {
         
         let targetVC = segue.destinationViewController as! CategoryTableViewController
         targetVC.appCategories = (DBHelper.Instance.managedObjectsByName("Category") as! [Category])
+      } else if segue.identifier == "goToMenu2"{
+        let targetVC = segue.destinationViewController as! CategoryCollectionViewController
+        targetVC.categoriesRetrived = (DBHelper.Instance.managedObjectsByName("Category") as! [Category])
       }
       
     }

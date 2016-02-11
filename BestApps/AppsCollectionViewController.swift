@@ -11,7 +11,7 @@ import KFSwiftImageLoader
 
 private let reuseIdentifier = "Cell"
 
-class AppsCollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
+class AppsCollectionViewController: UICollectionViewController{
 
   var appsInCategory : [App]?
   

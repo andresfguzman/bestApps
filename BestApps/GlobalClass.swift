@@ -37,7 +37,11 @@ class GlobalClass: NSObject {
         let myDB = DBHelper.Instance
         myDB.saveAllData(jsonObject!)
         dispatch_async(dispatch_get_main_queue(),{
-          currentController.performSegueWithIdentifier("goToMenu", sender: nil)
+          if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+            currentController.performSegueWithIdentifier("goToMenu2", sender: nil)
+          } else {
+            currentController.performSegueWithIdentifier("goToMenu", sender: nil)
+          }
           })
         break
       }
