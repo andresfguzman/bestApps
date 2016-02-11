@@ -14,6 +14,11 @@ class DBHelper: NSObject {
   
   static let Instance = DBHelper()
   
+  
+  /*
+  Método para guardar todos los elementos recibidos en el Json del webservice.
+  */
+  
   func saveAllData(rawJsonData: AnyObject){
     
     let wellFormedData = JSON(rawJsonData)
@@ -69,6 +74,10 @@ class DBHelper: NSObject {
     }
   }
   
+  /*
+  Método para guardar en la base de datos las categorias que se encontraron en los elementos del webservice.
+  */
+  
   func saveCategories(categoryObject: JSON){
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     let fetchRequest = NSFetchRequest(entityName:"Category")
@@ -102,6 +111,76 @@ class DBHelper: NSObject {
       print("problemas al guardar el contexto de las aplicaciones.")
     }
     
+  }
+  
+  /*
+    Método para obtener todos los datos de cualquier entidad de la base de datos.
+  */
+  
+  func managedObjectsByName(entityName: String, hasPredicate: Bool = false, predicateFormat: String = "%K == %@", predicateFilterParameter: String = "cat_id", predicateData: CVarArgType = 0) -> [NSManagedObject]?{
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    let fetchRequest = NSFetchRequest(entityName: entityName)
+    if hasPredicate{
+      let predicate = NSPredicate(format: predicateFormat, predicateFilterParameter, predicateData)
+      fetchRequest.predicate = predicate
+    }
+    //var categoriesToReturn : [Category]?
+    do{
+      let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+      // if there are any result, we just update the entity
+        if (fetchedResults.count > 0) {
+          return fetchedResults
+        }
+    }catch {
+      print("error al guardar datos")
+    }
+    return nil
+  }
+  
+  /*
+  Método para obtener las categorias existentes en la base de datos.
+  */
+  
+  func appCategories() -> [Category]?{
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    let fetchRequest = NSFetchRequest(entityName:"Category")
+    //var categoriesToReturn : [Category]?
+    do{
+      let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Category]
+      // if there are any result, we just update the entity
+      if let results = fetchedResults {
+        if (results.count > 0) {
+          return results
+        }
+      }
+      
+    }catch {
+      print("error al guardar datos")
+    }
+    return nil
+  }
+  
+  /*
+  Método para obtener las apps existentes en la base de datos.
+  */
+  
+  func bestApps() -> [App]?{
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    let fetchRequest = NSFetchRequest(entityName:"App")
+    //var categoriesToReturn : [Category]?
+    do{
+      let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [App]
+      // if there are any result, we just update the entity
+      if let results = fetchedResults {
+        if (results.count > 0) {
+          return results
+        }
+      }
+      
+    }catch {
+      print("error al guardar datos")
+    }
+    return nil
   }
 
 }
