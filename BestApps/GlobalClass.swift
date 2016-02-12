@@ -30,6 +30,18 @@ class GlobalClass: NSObject {
       switch service.result{
       case .Failure:
         
+        let mAlert = UIAlertController(title: "Error", message: "Error al conectar con el servidor, se usarán datos en memoria.", preferredStyle: UIAlertControllerStyle.Alert)
+        mAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in
+          
+          if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+            currentController.performSegueWithIdentifier("goToMenu2", sender: nil)
+          } else {
+            currentController.performSegueWithIdentifier("goToMenu", sender: nil)
+          }
+          
+        }))
+        currentController.presentViewController(mAlert, animated: true, completion: nil)
+        
         break
       case .Success:
         let jsonObject = service.result.value

@@ -14,13 +14,14 @@
 		7E8941B31C6C0FD100FF1B6B /* AppsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941B21C6C0FD100FF1B6B /* AppsCollectionViewController.swift */; };
 		7E8941B51C6C10AE00FF1B6B /* AppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941B41C6C10AE00FF1B6B /* AppCollectionViewCell.swift */; };
 		7E8941B71C6C1AE400FF1B6B /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941B61C6C1AE400FF1B6B /* CategoryCollectionViewController.swift */; };
+		7EA19FE81C6D964B00959A9A /* AppDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA19FE71C6D964B00959A9A /* AppDetails.storyboard */; };
+		7EA19FEA1C6D966F00959A9A /* AppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA19FE91C6D966F00959A9A /* AppDetailsViewController.swift */; };
 		7EA258FF1C6AA9C200906FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA258FE1C6AA9C200906FD4 /* AppDelegate.swift */; };
 		7EA259011C6AA9C200906FD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA259001C6AA9C200906FD4 /* ViewController.swift */; };
 		7EA259041C6AA9C300906FD4 /* MenuIphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA259021C6AA9C300906FD4 /* MenuIphone.storyboard */; };
 		7EA259071C6AA9C300906FD4 /* BestApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EA259051C6AA9C300906FD4 /* BestApps.xcdatamodeld */; };
 		7EA259091C6AA9C300906FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA259081C6AA9C300906FD4 /* Assets.xcassets */; };
 		7EA2590C1C6AA9C300906FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2590A1C6AA9C300906FD4 /* LaunchScreen.storyboard */; };
-		7EA259141C6AAA1D00906FD4 /* MenuIpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA259131C6AAA1D00906FD4 /* MenuIpad.storyboard */; };
 		7EA259171C6AACE000906FD4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA259161C6AACE000906FD4 /* SplashViewController.swift */; };
 		7EA2591B1C6AB13500906FD4 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2591A1C6AB13500906FD4 /* DBHelper.swift */; };
 		7EA2591D1C6AB14E00906FD4 /* GlobalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2591C1C6AB14E00906FD4 /* GlobalClass.swift */; };
@@ -42,6 +43,8 @@
 		7E8941B21C6C0FD100FF1B6B /* AppsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsCollectionViewController.swift; sourceTree = "<group>"; };
 		7E8941B41C6C10AE00FF1B6B /* AppCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E8941B61C6C1AE400FF1B6B /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		7EA19FE71C6D964B00959A9A /* AppDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppDetails.storyboard; sourceTree = "<group>"; };
+		7EA19FE91C6D966F00959A9A /* AppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailsViewController.swift; sourceTree = "<group>"; };
 		7EA258FB1C6AA9C200906FD4 /* BestApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA258FE1C6AA9C200906FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EA259001C6AA9C200906FD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		7EA259081C6AA9C300906FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA2590B1C6AA9C300906FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA2590D1C6AA9C300906FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EA259131C6AAA1D00906FD4 /* MenuIpad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuIpad.storyboard; sourceTree = "<group>"; };
 		7EA259161C6AACE000906FD4 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7EA2591A1C6AB13500906FD4 /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		7EA2591C1C6AB14E00906FD4 /* GlobalClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalClass.swift; sourceTree = "<group>"; };
@@ -138,9 +140,9 @@
 		7EA259151C6AAA2100906FD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7EA259131C6AAA1D00906FD4 /* MenuIpad.storyboard */,
 				7EA259021C6AA9C300906FD4 /* MenuIphone.storyboard */,
 				7E8941B01C6C0F7F00FF1B6B /* AppsView.storyboard */,
+				7EA19FE71C6D964B00959A9A /* AppDetails.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -153,6 +155,7 @@
 				7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */,
 				7E8941B21C6C0FD100FF1B6B /* AppsCollectionViewController.swift */,
 				7E8941B61C6C1AE400FF1B6B /* CategoryCollectionViewController.swift */,
+				7EA19FE91C6D966F00959A9A /* AppDetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -242,10 +245,10 @@
 			files = (
 				7EA2591F1C6AB1B500906FD4 /* Localizable.strings in Resources */,
 				7EA2590C1C6AA9C300906FD4 /* LaunchScreen.storyboard in Resources */,
-				7EA259141C6AAA1D00906FD4 /* MenuIpad.storyboard in Resources */,
 				7E8941B11C6C0F7F00FF1B6B /* AppsView.storyboard in Resources */,
 				7EA259091C6AA9C300906FD4 /* Assets.xcassets in Resources */,
 				7EA259041C6AA9C300906FD4 /* MenuIphone.storyboard in Resources */,
+				7EA19FE81C6D964B00959A9A /* AppDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +316,7 @@
 				7E8941AA1C6C03BB00FF1B6B /* CategoryTableViewController.swift in Sources */,
 				7EA259011C6AA9C200906FD4 /* ViewController.swift in Sources */,
 				7EA2591B1C6AB13500906FD4 /* DBHelper.swift in Sources */,
+				7EA19FEA1C6D966F00959A9A /* AppDetailsViewController.swift in Sources */,
 				7EA258FF1C6AA9C200906FD4 /* AppDelegate.swift in Sources */,
 				7E8941B71C6C1AE400FF1B6B /* CategoryCollectionViewController.swift in Sources */,
 				7EA259171C6AACE000906FD4 /* SplashViewController.swift in Sources */,

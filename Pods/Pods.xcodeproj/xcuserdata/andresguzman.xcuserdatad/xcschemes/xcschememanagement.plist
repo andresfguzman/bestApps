@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EasyAnimation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KFSwiftImageLoader.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>14F4EA6443B09C88C2D3DB560F03BEAE</key>
+		<key>186A3FC675F38F0C7806D1767E9E409C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8C88CAD0DB72C6857C946F3DD705952E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>935868B02D678B72AAD39DDD2E0FCF7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A69E60D5E46B9D83A0203BBFB4D0D599</key>
+		<key>A376E868ED408EE8EEBD1DDBCE639EF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

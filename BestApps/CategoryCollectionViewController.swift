@@ -17,9 +17,12 @@ class CategoryCollectionViewController: UICollectionViewController {
   var categoriesRetrived : [Category]?
   var currentIndex = 0
   
+  // MARK: OVERRIDE METHODS
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       self.navigationController?.navigationBarHidden = false
+      self.title = "Best Apps Ever!"
       setupCollectionView()
         // Register cell classes
         self.collectionView!.registerClass(AppCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -44,28 +47,24 @@ class CategoryCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return (categoriesRetrived?.count)!
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
       let cellCategory = categoriesRetrived![indexPath.item]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! AppCollectionViewCell
-      cell.imageView.image = UIImage(named: "games_category")
+      cell.imageView.image = UIImage(named: cellCategory.cat_name!)
       cell.textLabel.text = cellCategory.cat_name
-    
-        // Configure the cell
-    
         return cell
     }
 
   override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    // se actualiza la variable global currentIndex para indicar la posición a la que se dió click y poder recuperar los datos dependiendo del id de la misma, esta consulta se realiza en el prepare for segue.
     currentIndex = indexPath.item
     performSegueWithIdentifier("goToApps", sender: nil)
   }

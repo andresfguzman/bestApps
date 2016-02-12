@@ -21,13 +21,20 @@ class AppCollectionViewCell: UICollectionViewCell {
     //imageButton = UIButton(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height*8/10))
     imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height*8/10))
     //imageButton.contentMode = UIViewContentMode.ScaleToFill
+    imageView.clipsToBounds = true
     imageView.contentMode = UIViewContentMode.ScaleToFill
     contentView.addSubview(imageView)
     
     textLabel = UILabel(frame: CGRect(x: 1, y: imageView.frame.size.height, width: frame.size.width-2, height: frame.size.height*2/10-2))
-    textLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+    //textLabel.font = UIFont.systemFontOfSize(UIFont.buttonFontSize())
+    textLabel.font = UIFont.boldSystemFontOfSize(UIFont.buttonFontSize())
     textLabel.textAlignment = .Center
-    textLabel.backgroundColor = UIColor.whiteColor()
+    textLabel.backgroundColor = UIColor.clearColor()
+    contentView.backgroundColor = nil
+    contentView.clipsToBounds = true
+    contentView.layer.cornerRadius = 10
+    contentView.layer.borderWidth = 2.0
+    contentView.layer.borderColor = UIColor.grayColor().CGColor
     contentView.addSubview(textLabel)
   }
   

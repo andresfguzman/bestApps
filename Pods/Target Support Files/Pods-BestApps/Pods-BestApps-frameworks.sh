@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BestApps/Alamofire.framework"
+  install_framework "Pods-BestApps/EasyAnimation.framework"
   install_framework "Pods-BestApps/KFSwiftImageLoader.framework"
   install_framework "Pods-BestApps/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BestApps/Alamofire.framework"
+  install_framework "Pods-BestApps/EasyAnimation.framework"
   install_framework "Pods-BestApps/KFSwiftImageLoader.framework"
   install_framework "Pods-BestApps/SwiftyJSON.framework"
 fi

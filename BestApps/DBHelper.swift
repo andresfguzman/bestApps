@@ -16,7 +16,8 @@ class DBHelper: NSObject {
   
   
   /*
-  Método para guardar todos los elementos recibidos en el Json del webservice.
+  Método para guardar todos los elementos recibidos en el Json del webservice (apps con sus atributos)
+  Este método actualiza los datos si ya existen en la base de datos y si no los crea.
   */
   
   func saveAllData(rawJsonData: AnyObject){
@@ -63,10 +64,10 @@ class DBHelper: NSObject {
         saveCategories(app["category"])
         
       }catch {
-        print("error al guardar datos")
+        print("Error al consultar los datos.")
       }
     }
-    
+    // Se guarda el contexto actual con los objetos que se crearon en él
     do{
       try managedObjectContext.save()
     }catch{
@@ -75,7 +76,7 @@ class DBHelper: NSObject {
   }
   
   /*
-  Método para guardar en la base de datos las categorias que se encontraron en los elementos del webservice.
+  Método para guardar en la base de datos las categorias que se encontraron en los elementos del webservice (hace parte del método de saveAllData.
   */
   
   func saveCategories(categoryObject: JSON){
@@ -102,19 +103,19 @@ class DBHelper: NSObject {
       }
       
     }catch {
-      print("error al guardar datos")
+      print("Error al recuperar los datos.")
     }
     
     do{
       try managedObjectContext.save()
     }catch{
-      print("problemas al guardar el contexto de las aplicaciones.")
+      print("problemas al guardar el contexto de las categorias..")
     }
     
   }
   
   /*
-    Método para obtener todos los datos de cualquier entidad de la base de datos.
+    Método para obtener todos los datos de cualquier entidad de la base de datos actual. Para recuperarlos debidamente se deben forzar a los objetos que se desean obtener (p.e managedObjectByName(atributos) as! [Category]
   */
   
   func managedObjectsByName(entityName: String, hasPredicate: Bool = false, predicateFormat: String = "%K == %@", predicateFilterParameter: String = "cat_id", predicateData: CVarArgType = 0) -> [NSManagedObject]?{
@@ -124,7 +125,6 @@ class DBHelper: NSObject {
       let predicate = NSPredicate(format: predicateFormat, predicateFilterParameter, predicateData)
       fetchRequest.predicate = predicate
     }
-    //var categoriesToReturn : [Category]?
     do{
       let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
       // if there are any result, we just update the entity
@@ -139,7 +139,7 @@ class DBHelper: NSObject {
   
   /*
   Método para obtener las categorias existentes en la base de datos.
-  */
+
   
   func appCategories() -> [Category]?{
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -160,9 +160,8 @@ class DBHelper: NSObject {
     return nil
   }
   
-  /*
   Método para obtener las apps existentes en la base de datos.
-  */
+
   
   func bestApps() -> [App]?{
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -181,6 +180,6 @@ class DBHelper: NSObject {
       print("error al guardar datos")
     }
     return nil
-  }
+  }*/
 
 }

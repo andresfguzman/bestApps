@@ -10,14 +10,21 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
 
+  // MARK: VARIABLES
+  
   var appCategories : [Category]?
   var currentIndex = 0
+  
+  // MARK: OVERRIDE METHODS
   
     override func viewDidLoad() {
         super.viewDidLoad()
       self.navigationController?.navigationBarHidden = false
+      self.title = "Best Apps Ever!"
     }
 
+  // MARK: TABLEVIEW SETUP
+  
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 90
   }
@@ -36,25 +43,30 @@ class CategoryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return (appCategories?.count)!
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+      let cellCategory = appCategories![indexPath.section]
         let cell = tableView.dequeueReusableCellWithIdentifier("categoryCell") as! CategoryTableViewCell
-      cell.categoryName.text = appCategories![indexPath.section].cat_name
-
-        // Configure the cell...
-
+      cell.categoryName.text = cellCategory.cat_name//appCategories![indexPath.section].cat_name
+      cell.categoryImage.image = UIImage(named: cellCategory.cat_name!)
+      cell.categoryCellContent.layer.cornerRadius = 15
+      cell.categoryCellContent.clipsToBounds = true
+      cell.categoryCellContent.layer.borderWidth = 3.0
+      cell.categoryCellContent.layer.borderColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1).CGColor
+      
         return cell
+      
     }
 
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    // Se actualiza la variable global current index para obtener la lista de apps de determinada categoria y enviarla al controlador de destino mediante el metodo prepareforsegue.
+    
     currentIndex = indexPath.section
     performSegueWithIdentifier("goToApps", sender: nil)
   }
