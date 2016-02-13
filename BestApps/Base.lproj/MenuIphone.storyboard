@@ -89,6 +89,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.85556891025641024" green="0.85556891025641024" blue="0.85556891025641024" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="90" id="OTd-q9-uuf" customClass="CategoryTableViewCell" customModule="BestApps" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="90"/>
@@ -103,7 +104,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDk-Vw-O7C">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -111,10 +112,13 @@
                                         <constraint firstItem="JDk-Vw-O7C" firstAttribute="top" secondItem="HJy-OM-tbi" secondAttribute="top" constant="8" id="JnF-IF-2Qn"/>
                                         <constraint firstItem="0kA-40-iqb" firstAttribute="top" secondItem="HJy-OM-tbi" secondAttribute="top" id="OYt-b3-fNS"/>
                                         <constraint firstItem="0kA-40-iqb" firstAttribute="width" secondItem="HJy-OM-tbi" secondAttribute="width" multiplier="0.2" id="WOd-qW-YWP"/>
+                                        <constraint firstItem="0kA-40-iqb" firstAttribute="leading" secondItem="HJy-OM-tbi" secondAttribute="leading" constant="8" id="aHc-fX-4YQ"/>
                                         <constraint firstAttribute="bottom" secondItem="JDk-Vw-O7C" secondAttribute="bottom" constant="8" id="aIq-8M-X1E"/>
+                                        <constraint firstItem="0kA-40-iqb" firstAttribute="top" secondItem="HJy-OM-tbi" secondAttribute="top" constant="8" id="bOK-Po-7lx"/>
                                         <constraint firstItem="0kA-40-iqb" firstAttribute="leading" secondItem="HJy-OM-tbi" secondAttribute="leading" id="dcW-qp-Yku"/>
                                         <constraint firstAttribute="trailing" secondItem="JDk-Vw-O7C" secondAttribute="trailing" constant="8" id="qP8-F1-F0a"/>
                                         <constraint firstAttribute="bottom" secondItem="0kA-40-iqb" secondAttribute="bottom" id="sp3-RY-a7F"/>
+                                        <constraint firstAttribute="bottom" secondItem="0kA-40-iqb" secondAttribute="bottom" constant="8" id="ttA-sk-AKB"/>
                                         <constraint firstItem="JDk-Vw-O7C" firstAttribute="leading" secondItem="0kA-40-iqb" secondAttribute="trailing" constant="8" id="uEO-6Z-Jem"/>
                                     </constraints>
                                     <variation key="default">
@@ -129,8 +133,11 @@
                                             <exclude reference="uEO-6Z-Jem"/>
                                             <exclude reference="OYt-b3-fNS"/>
                                             <exclude reference="WOd-qW-YWP"/>
+                                            <exclude reference="aHc-fX-4YQ"/>
+                                            <exclude reference="bOK-Po-7lx"/>
                                             <exclude reference="dcW-qp-Yku"/>
                                             <exclude reference="sp3-RY-a7F"/>
+                                            <exclude reference="ttA-sk-AKB"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=compact">
@@ -143,10 +150,13 @@
                                             <include reference="aIq-8M-X1E"/>
                                             <include reference="qP8-F1-F0a"/>
                                             <include reference="uEO-6Z-Jem"/>
-                                            <include reference="OYt-b3-fNS"/>
+                                            <exclude reference="OYt-b3-fNS"/>
                                             <include reference="WOd-qW-YWP"/>
-                                            <include reference="dcW-qp-Yku"/>
-                                            <include reference="sp3-RY-a7F"/>
+                                            <include reference="aHc-fX-4YQ"/>
+                                            <include reference="bOK-Po-7lx"/>
+                                            <exclude reference="dcW-qp-Yku"/>
+                                            <exclude reference="sp3-RY-a7F"/>
+                                            <include reference="ttA-sk-AKB"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -216,7 +226,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hBr-lA-MOX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Xq-yk-5lW">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="0Xq-yk-5lW">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>

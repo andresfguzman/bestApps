@@ -39,6 +39,7 @@ class CategoryCollectionViewController: UICollectionViewController {
     let overallSpacing = mWidth/3
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     layout.sectionInset = UIEdgeInsets(top: overallSpacing, left: overallSpacing, bottom: overallSpacing, right: overallSpacing)
+    layout.minimumLineSpacing = overallSpacing/2
     layout.itemSize = CGSize(width: mWidth, height: mHeigth)
     collectionView!.collectionViewLayout = layout
 
@@ -64,9 +65,18 @@ class CategoryCollectionViewController: UICollectionViewController {
     }
 
   override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    let selectedCell = collectionView.cellForItemAtIndexPath(indexPath)
     // se actualiza la variable global currentIndex para indicar la posición a la que se dió click y poder recuperar los datos dependiendo del id de la misma, esta consulta se realiza en el prepare for segue.
-    currentIndex = indexPath.item
-    performSegueWithIdentifier("goToApps", sender: nil)
+    selectedCell?.superview?.bringSubviewToFront(selectedCell!)
+    UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [UIViewAnimationOptions.CurveEaseOut], animations: { () -> Void in
+      selectedCell?.frame = collectionView.bounds
+      collectionView.scrollEnabled = false
+      }, completion: {(completion) -> Void in
+      
+        self.currentIndex = indexPath.item
+        self.performSegueWithIdentifier("goToApps", sender: nil)
+        
+      })
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -76,4 +86,11 @@ class CategoryCollectionViewController: UICollectionViewController {
       
     }
   }
+
+  override func viewWillDisappear(animated: Bool) {
+    let allIndexPaths = collectionView!.indexPathsForSelectedItems()! as [NSIndexPath]
+    collectionView!.scrollEnabled = true
+    collectionView!.reloadItemsAtIndexPaths(allIndexPaths)
+  }
+  
 }

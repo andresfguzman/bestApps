@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E3FB6B41C6E550600CCE041 /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3FB6B31C6E550600CCE041 /* CellAnimator.swift */; };
 		7E8941AA1C6C03BB00FF1B6B /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */; };
 		7E8941AD1C6C03E900FF1B6B /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941AC1C6C03E900FF1B6B /* CategoryTableViewCell.swift */; };
 		7E8941AF1C6C0C8F00FF1B6B /* ReplaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941AE1C6C0C8F00FF1B6B /* ReplaceSegue.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		2EF29BABDC8F7526EB36F015 /* Pods-BestApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestApps.release.xcconfig"; path = "Pods/Target Support Files/Pods-BestApps/Pods-BestApps.release.xcconfig"; sourceTree = "<group>"; };
 		61CB019F80C721709B5E44C9 /* Pods-BestApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestApps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BestApps/Pods-BestApps.debug.xcconfig"; sourceTree = "<group>"; };
+		7E3FB6B31C6E550600CCE041 /* CellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
 		7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		7E8941AC1C6C03E900FF1B6B /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		7E8941AE1C6C0C8F00FF1B6B /* ReplaceSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceSegue.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				7EA2591A1C6AB13500906FD4 /* DBHelper.swift */,
 				7EA2591C1C6AB14E00906FD4 /* GlobalClass.swift */,
+				7E3FB6B31C6E550600CCE041 /* CellAnimator.swift */,
 				7EA2591E1C6AB1B500906FD4 /* Localizable.strings */,
 				7E8941AE1C6C0C8F00FF1B6B /* ReplaceSegue.swift */,
 			);
@@ -317,6 +320,7 @@
 				7EA259011C6AA9C200906FD4 /* ViewController.swift in Sources */,
 				7EA2591B1C6AB13500906FD4 /* DBHelper.swift in Sources */,
 				7EA19FEA1C6D966F00959A9A /* AppDetailsViewController.swift in Sources */,
+				7E3FB6B41C6E550600CCE041 /* CellAnimator.swift in Sources */,
 				7EA258FF1C6AA9C200906FD4 /* AppDelegate.swift in Sources */,
 				7E8941B71C6C1AE400FF1B6B /* CategoryCollectionViewController.swift in Sources */,
 				7EA259171C6AACE000906FD4 /* SplashViewController.swift in Sources */,

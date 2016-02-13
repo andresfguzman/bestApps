@@ -18,6 +18,7 @@ class DBHelper: NSObject {
   /*
   Método para guardar todos los elementos recibidos en el Json del webservice (apps con sus atributos)
   Este método actualiza los datos si ya existen en la base de datos y si no los crea.
+  Queda pendiente como mejora la implementación de un batch que permita la eliminación local de los elementos que ya no hacen parte del webservice.
   */
   
   func saveAllData(rawJsonData: AnyObject){
@@ -136,50 +137,5 @@ class DBHelper: NSObject {
     }
     return nil
   }
-  
-  /*
-  Método para obtener las categorias existentes en la base de datos.
-
-  
-  func appCategories() -> [Category]?{
-    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    let fetchRequest = NSFetchRequest(entityName:"Category")
-    //var categoriesToReturn : [Category]?
-    do{
-      let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Category]
-      // if there are any result, we just update the entity
-      if let results = fetchedResults {
-        if (results.count > 0) {
-          return results
-        }
-      }
-      
-    }catch {
-      print("error al guardar datos")
-    }
-    return nil
-  }
-  
-  Método para obtener las apps existentes en la base de datos.
-
-  
-  func bestApps() -> [App]?{
-    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    let fetchRequest = NSFetchRequest(entityName:"App")
-    //var categoriesToReturn : [Category]?
-    do{
-      let fetchedResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [App]
-      // if there are any result, we just update the entity
-      if let results = fetchedResults {
-        if (results.count > 0) {
-          return results
-        }
-      }
-      
-    }catch {
-      print("error al guardar datos")
-    }
-    return nil
-  }*/
 
 }

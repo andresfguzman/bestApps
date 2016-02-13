@@ -48,9 +48,11 @@
                     </collectionView>
                     <connections>
                         <segue destination="nbx-RG-tKt" kind="presentation" identifier="goToDetails" modalTransitionStyle="crossDissolve" id="Tvc-7X-PAJ"/>
+                        <segue destination="P1c-lQ-fL4" kind="unwind" identifier="goBackToCategories" unwindAction="unwindToCategoryCollectionView:" id="GO5-cZ-0c8"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otY-zb-8j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="P1c-lQ-fL4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="270" y="226"/>
         </scene>

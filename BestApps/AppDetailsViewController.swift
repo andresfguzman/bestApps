@@ -51,6 +51,13 @@ class AppDetailsViewController: UIViewController {
     
   }
   
+  @IBAction func openUrl(sender: AnyObject) {
+    let linkString = currentApp.app_link!
+    print(linkString)
+    UIApplication.sharedApplication().openURL(NSURL(string: linkString)!)
+    
+  }
+  
     /*
     // MARK: - Navigation
 

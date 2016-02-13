@@ -39,6 +39,7 @@ class AppsCollectionViewController: UICollectionViewController{
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     layout.sectionInset = UIEdgeInsets(top: overallSpacing, left: overallSpacing, bottom: overallSpacing, right: overallSpacing)
     layout.itemSize = CGSize(width: mWidth, height: mHeigth)
+    layout.minimumLineSpacing = overallSpacing/2
     collectionView!.collectionViewLayout = layout
 
   }
@@ -55,8 +56,20 @@ class AppsCollectionViewController: UICollectionViewController{
     }
   
   override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    currentIndex = indexPath.item
-    performSegueWithIdentifier("goToDetails", sender: nil)
+    //let toanimate = collectionView.cellForItemAtIndexPath(indexPath) as! AppCollectionViewCell
+    
+    let selectedCell = collectionView.cellForItemAtIndexPath(indexPath)
+    // se actualiza la variable global currentIndex para indicar la posición a la que se dió click y poder recuperar los datos dependiendo del id de la misma, esta consulta se realiza en el prepare for segue.
+    selectedCell?.superview?.bringSubviewToFront(selectedCell!)
+    UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: { () -> Void in
+      
+      selectedCell?.frame = collectionView.bounds
+      collectionView.scrollEnabled = false
+      
+      }, completion: {(completion) -> Void in
+        self.currentIndex = indexPath.item
+        self.performSegueWithIdentifier("goToDetails", sender: nil)
+    })
   }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -75,8 +88,14 @@ class AppsCollectionViewController: UICollectionViewController{
       
       let targetVC = segue.destinationViewController.childViewControllers[0] as! AppDetailsViewController
       targetVC.currentApp = appsInCategory![currentIndex]
-      
     }
+  }
+  
+  @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
+    
+    let allIndexPaths = self.collectionView!.indexPathsForSelectedItems()! as [NSIndexPath]
+    collectionView!.scrollEnabled = true
+    collectionView!.reloadItemsAtIndexPaths(allIndexPaths)
     
   }
   

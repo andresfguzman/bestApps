@@ -46,17 +46,20 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy2-Mc-Z1x">
                                                 <rect key="frame" x="8" y="92" width="584" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbe-YD-NlO">
                                                 <rect key="frame" x="8" y="121" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="openUrl:" destination="XA7-vA-tvR" eventType="touchUpInside" id="eeb-Ju-Krq"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eaz-1D-Xtm">
                                                 <rect key="frame" x="8" y="159" width="53" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -101,7 +104,7 @@
                     <navigationItem key="navigationItem" id="0Rr-F9-1OB">
                         <barButtonItem key="leftBarButtonItem" title="volver" id="NIv-t5-uMU">
                             <connections>
-                                <action selector="closeController:" destination="XA7-vA-tvR" id="NW1-Di-z5K"/>
+                                <segue destination="vNB-IO-Zuq" kind="unwind" unwindAction="unwindToThisViewController:" id="ego-4E-zYD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -115,6 +118,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9w-sW-XYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vNB-IO-Zuq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="827" y="38"/>
         </scene>

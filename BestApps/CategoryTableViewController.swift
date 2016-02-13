@@ -59,16 +59,33 @@ class CategoryTableViewController: UITableViewController {
       cell.categoryCellContent.clipsToBounds = true
       cell.categoryCellContent.layer.borderWidth = 3.0
       cell.categoryCellContent.layer.borderColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1).CGColor
-      
         return cell
       
     }
-
+  
+  override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    //CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformWave, andDuration: 0.5)
+  }
+  
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     // Se actualiza la variable global current index para obtener la lista de apps de determinada categoria y enviarla al controlador de destino mediante el metodo prepareforsegue.
+    let currentCell = tableView.cellForRowAtIndexPath(indexPath)
     
-    currentIndex = indexPath.section
-    performSegueWithIdentifier("goToApps", sender: nil)
+    UIView.animateWithDuration(0.2, delay: 0.0,
+      options: [UIViewAnimationOptions.CurveEaseOut],
+      animations: {
+        currentCell!.layer.position.x += 100.0
+      }, completion: {completion in
+        self.currentIndex = indexPath.section
+        self.performSegueWithIdentifier("goToApps", sender: nil)
+        UIView.animateWithDuration(1.0, delay: 0.0,
+          options: [UIViewAnimationOptions.CurveEaseIn],
+          animations: {
+            currentCell!.layer.position.x -= 100.0
+          }, completion: {completion in
+        })
+        
+    })
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
