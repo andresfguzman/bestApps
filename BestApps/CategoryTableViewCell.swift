@@ -9,20 +9,19 @@
 import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
-
-  
-  @IBOutlet weak var categoryCellContent: UIView!
-  @IBOutlet weak var categoryImage: UIImageView!
-  @IBOutlet weak var categoryName: UILabel!
+    
+    
+    @IBOutlet weak var categoryCellContent: UIView!
+    @IBOutlet weak var categoryImage: UIImageView!
+    @IBOutlet weak var categoryName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
 }

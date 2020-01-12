@@ -13,7 +13,7 @@ import Foundation
 import CoreData
 
 extension App {
-
+    
     @NSManaged var app_id: String?
     @NSManaged var app_name: String?
     @NSManaged var app_link: String?
@@ -24,5 +24,5 @@ extension App {
     @NSManaged var app_price: String?
     @NSManaged var app_summary: String?
     @NSManaged var cat_id: String?
-
+    
 }

@@ -1,28 +1,28 @@
 PODS:
-  - Alamofire (3.2.0)
-  - EasyAnimation (1.0.2)
-  - KFSwiftImageLoader (2.0.1)
-  - SwiftyJSON (2.3.2)
+  - Alamofire (4.9.1)
+  - EasyAnimation (2.2.1)
+  - KFSwiftImageLoader (4.0.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.0)
+  - Alamofire
   - EasyAnimation
-  - KFSwiftImageLoader (~> 2.0)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - KFSwiftImageLoader
+  - SwiftyJSON
 
-EXTERNAL SOURCES:
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-
-CHECKOUT OPTIONS:
-  SwiftyJSON:
-    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - EasyAnimation
+    - KFSwiftImageLoader
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
-  EasyAnimation: 9615e40f58aa7d8d6a67de66e0edda1903ffa990
-  KFSwiftImageLoader: a2b8a33a89116c767e7af8d2c109e8c483037b19
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  EasyAnimation: 226d133d23ef0ef99ddfb8928ff2a9a4a77d1cfd
+  KFSwiftImageLoader: f6edb1af1c9ed23906509d4db7e00edc1086228b
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: afb484c19d89e4e340b17e3f1d8a912862afd964
+
+COCOAPODS: 1.8.4

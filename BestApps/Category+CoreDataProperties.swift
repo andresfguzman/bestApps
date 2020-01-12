@@ -13,8 +13,8 @@ import Foundation
 import CoreData
 
 extension Category {
-
+    
     @NSManaged var cat_id: String?
     @NSManaged var cat_name: String?
-
+    
 }
