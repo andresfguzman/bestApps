@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AppDetailsViewController: UIViewController {
-    
-    var currentApp : App!
+class AppDetailsViewController: BaseViewController, AppDetailsView {
+
+    var presenter: AppDetailsPresenterProtocol!
     
     @IBOutlet weak var firstPhoto: UIImageView!
     @IBOutlet weak var secondPhoto: UIImageView!
@@ -18,42 +18,27 @@ class AppDetailsViewController: UIViewController {
     @IBOutlet weak var appDescription: UILabel!
     @IBOutlet weak var buttonUrl: UIButton!
     @IBOutlet weak var appPrice: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupProfileContent()
-        // Do any additional setup after loading the view.
+        presenter.viewDidLoad()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func setupProfileContent(){
-        
-        self.title = currentApp.app_name
-        firstPhoto.loadImage(urlString: currentApp.app_image1!)
-        secondPhoto.loadImage(urlString: currentApp.app_image2!)
-        thirdPhoto.loadImage(urlString: currentApp.app_image3!)
-        appDescription.text = currentApp.app_summary
-        buttonUrl.setTitle(currentApp.app_link, for: .normal)
-        if currentApp.app_price == "0.00000"{
+    func setupView(with model: App) {
+        self.title = model.app_name
+        firstPhoto.loadImage(urlString: model.app_image1!)
+        secondPhoto.loadImage(urlString: model.app_image2!)
+        thirdPhoto.loadImage(urlString: model.app_image3!)
+        appDescription.text = model.app_summary
+        buttonUrl.setTitle(model.app_link, for: .normal)
+        if model.app_price == "0.00000"{
             appPrice.text = "Precio: Gratuita"
         } else {
-            appPrice.text = "Precio: \(currentApp.app_price)"
+            appPrice.text = "Precio: \(String(describing: model.app_price))"
         }
     }
     
-    
-    @IBAction func closeController(sender: AnyObject) {
-        
-        self.dismiss(animated: true, completion: nil)
-        
-    }
-    
     @IBAction func openUrl(sender: AnyObject) {
-        let linkString = currentApp.app_link!
-        print(linkString)
-        UIApplication.shared.open(URL(string: linkString)!, options: [:], completionHandler: nil)
+        presenter.didTapOpenUrl()
     }
 }

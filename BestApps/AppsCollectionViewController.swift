@@ -11,12 +11,10 @@ import KFSwiftImageLoader
 
 private let reuseIdentifier = "Cell"
 
-class AppsCollectionViewController: UICollectionViewController{
+class AppsCollectionViewController: UICollectionViewController, AppListView {
     
     // MARK: VARIABLES
-    
-    var appsInCategory : [App]?
-    var currentIndex = 0
+    var presenter: AppListPresenterProtocol!
     
     // MARK: OVERRIDE METHODS
     
@@ -24,6 +22,7 @@ class AppsCollectionViewController: UICollectionViewController{
         super.viewDidLoad()
         
         setupCollectionView()
+        presenter.viewDidLoad()
         // Register cell classes
         self.collectionView!.register(AppCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
@@ -41,7 +40,6 @@ class AppsCollectionViewController: UICollectionViewController{
         layout.itemSize = CGSize(width: mWidth, height: mHeigth)
         layout.minimumLineSpacing = overallSpacing/2
         collectionView!.collectionViewLayout = layout
-        
     }
     
     // MARK: UICollectionViewDataSource
@@ -51,28 +49,15 @@ class AppsCollectionViewController: UICollectionViewController{
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (appsInCategory?.count)!
+        return presenter.getAppsCount()
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let toanimate = collectionView.cellForItemAtIndexPath(indexPath) as! AppCollectionViewCell
-        
-        let selectedCell = collectionView.cellForItem(at: indexPath)
-        // se actualiza la variable global currentIndex para indicar la posición a la que se dió click y poder recuperar los datos dependiendo del id de la misma, esta consulta se realiza en el prepare for segue.
-        selectedCell?.superview?.bringSubviewToFront(selectedCell!)
-        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: { () -> Void in
-            
-            selectedCell?.frame = collectionView.bounds
-            collectionView.isScrollEnabled = false
-            
-        }, completion: {(completion) -> Void in
-            self.currentIndex = indexPath.item
-            self.performSegue(withIdentifier: "goToDetails", sender: nil)
-        })
+        self.presenter.didSelectItem(at: indexPath.item)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let appAtIndex = appsInCategory![indexPath.item]
+        let appAtIndex = presenter.getApp(at: indexPath.item)
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! AppCollectionViewCell
         cell.imageView.loadImage(urlString: appAtIndex.app_image1!)
@@ -80,18 +65,11 @@ class AppsCollectionViewController: UICollectionViewController{
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDetails"{
-            
-            let targetVC = segue.destination.children[0] as! AppDetailsViewController
-            targetVC.currentApp = appsInCategory![currentIndex]
-        }
-    }
-    
     @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
-        
         let allIndexPaths = self.collectionView!.indexPathsForSelectedItems! as [NSIndexPath]
         collectionView!.isScrollEnabled = true
         collectionView!.reloadItems(at: allIndexPaths as [IndexPath])
     }
 }
+
+extension AppsCollectionViewController: Storyboard { }

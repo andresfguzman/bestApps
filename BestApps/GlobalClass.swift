@@ -9,6 +9,13 @@
 import Foundation
 import Alamofire
 
+enum ServiceResult {
+    case success
+    case failure(error: Error)
+}
+
+typealias ServiceResponse = (ServiceResult) -> Void
+
 class GlobalClass: NSObject {
     
     
@@ -16,47 +23,19 @@ class GlobalClass: NSObject {
     
     let mainServiceURL = NSLocalizedString("general_webservice", comment: "")
     
-    // MARK: Helper Functions
-    /*
-     Método para consumir el servicio con los datos de las aplicaciones.
-     Parámetro 1: Url del servicio.
-     Parámetro 2: el controlador actual.
-     */
-    
-    func obtainMainService(serviceURL: String, currentController: UIViewController) {
+    func obtainMainService(with closure: @escaping ServiceResponse) {
         
-        Alamofire.request(serviceURL, method: .get).responseJSON { (service) -> Void in
+        Alamofire.request(mainServiceURL, method: .get).responseJSON { (service) -> Void in
             
             switch service.result{
             case .failure(let error):
-                
-                let mAlert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                mAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in
-                    
-                    if UIDevice.current.userInterfaceIdiom == .pad {
-                        currentController.performSegue(withIdentifier: "goToMenu2", sender: nil)
-                    } else {
-                        currentController.performSegue(withIdentifier: "goToMenu", sender: nil)
-                    }
-                    
-                }))
-                currentController.present(mAlert, animated: true, completion: nil)
-                
-                break
-            case .success(_):
+                closure(.failure(error: error))
+
+            case .success:
                 let jsonObject = service.result.value
-                //print(jsonObject)
                 let myDB = DBHelper.Instance
                 myDB.saveAllData(rawJsonData: jsonObject! as AnyObject)
-                
-                DispatchQueue.main.async {
-                    if UIDevice.current.userInterfaceIdiom == .pad{
-                        currentController.performSegue(withIdentifier: "goToMenu2", sender: nil)
-                    } else {
-                        currentController.performSegue(withIdentifier: "goToMenu", sender: nil)
-                    }
-                }
-                break
+                closure(.success)
             }
         }
     }

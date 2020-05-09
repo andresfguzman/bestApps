@@ -8,17 +8,16 @@
 
 import UIKit
 
-class CategoryTableViewController: UITableViewController {
+class CategoryTableViewController: UITableViewController, CategoryListView {
     
     // MARK: VARIABLES
-    
-    var appCategories : [Category]?
-    var currentIndex = 0
+    var presenter: CategoryListPresenterProtocol!
     
     // MARK: OVERRIDE METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         self.title = "Best Apps Ever!"
     }
@@ -42,7 +41,7 @@ class CategoryTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return (appCategories?.count)!
+        return presenter.getCategoryCount()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,7 +49,7 @@ class CategoryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellCategory = appCategories![indexPath.section]
+        let cellCategory = presenter.getCategory(at: indexPath.section)
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell") as! CategoryTableViewCell
         cell.categoryName.text = cellCategory.cat_name//appCategories![indexPath.section].cat_name
         cell.categoryImage.image = UIImage(named: cellCategory.cat_name!)
@@ -67,7 +66,6 @@ class CategoryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Se actualiza la variable global current index para obtener la lista de apps de determinada categoria y enviarla al controlador de destino mediante el metodo prepareforsegue.
         let currentCell = tableView.cellForRow(at: indexPath)
         
         UIView.animate(withDuration: 0.2, delay: 0.0,
@@ -75,8 +73,7 @@ class CategoryTableViewController: UITableViewController {
                        animations: {
                         currentCell!.layer.position.x += 100.0
         }, completion: {completion in
-            self.currentIndex = indexPath.section
-            self.performSegue(withIdentifier: "goToApps", sender: nil)
+            self.presenter.didSelectItem(at: indexPath.section)
             UIView.animate(withDuration: 1.0, delay: 0.0,
                            options: [UIView.AnimationOptions.curveEaseIn],
                            animations: {
@@ -86,12 +83,6 @@ class CategoryTableViewController: UITableViewController {
             
         })
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToApps"{
-            let targetVC = segue.destination as! AppsCollectionViewController
-            targetVC.appsInCategory = (DBHelper.Instance.managedObjectsByName(entityName: "App",hasPredicate: true,predicateFormat: "%K == %@",predicateFilterParameter: "cat_id",predicateData: appCategories![currentIndex].cat_id!) as! [App])
-            
-        }
-    }
 }
+
+extension CategoryTableViewController: Storyboard { }
