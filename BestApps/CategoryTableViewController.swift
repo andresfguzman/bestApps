@@ -18,7 +18,7 @@ class CategoryTableViewController: UITableViewController, CategoryListView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
-        tableView.register(CategoryTableViewCell.self, forCellReuseIdentifier: String(describing: CategoryTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: CategoryTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CategoryTableViewCell.self))
         self.navigationController?.isNavigationBarHidden = false
     }
     
