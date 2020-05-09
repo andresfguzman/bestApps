@@ -19,7 +19,7 @@ class CategoryTableViewController: UITableViewController, CategoryListView {
         super.viewDidLoad()
         presenter.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
-        self.title = "Best Apps Ever!"
+        self.title = "General.NavBar.Title".localized
     }
     
     // MARK: TABLEVIEW SETUP

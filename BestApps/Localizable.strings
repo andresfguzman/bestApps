@@ -6,4 +6,11 @@
   Copyright © 2016 andres. All rights reserved.
 */
 
-"general_webservice" = "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json";
+"General.NavBar.Title" = "Best Apps Ever!";
+
+"General.Alert.Error.Title" = "Error";
+"General.Alert.OK" = "OK";
+"General.Alert.Cancel" = "Cancel";
+
+"AppDetails.price" = "Precio: %@";
+"AppDetails.freeApp" = "Gratuita";

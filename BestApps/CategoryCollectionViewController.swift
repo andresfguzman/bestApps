@@ -20,7 +20,7 @@ class CategoryCollectionViewController: UICollectionViewController, CategoryList
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
-        self.title = "Best Apps Ever!"
+        self.title = "General.NavBar.Title".localized
         setupCollectionView()
         // Register cell classes
         self.collectionView!.register(AppCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)

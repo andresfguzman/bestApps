@@ -37,8 +37,8 @@ final class SplashRouter: SplashRouterProtocol {
     }
     
     func routeToError(with message: String) {
-        let mAlert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        mAlert.addAction(UIAlertAction(title: "Ok",
+        let mAlert = UIAlertController(title: "General.Alert.Error.Title".localized, message: message, preferredStyle: .alert)
+        mAlert.addAction(UIAlertAction(title: "General.Alert.OK".localized,
                                        style: .default,
                                        handler: { [weak self] (alert: UIAlertAction!) in
             self?.goToCategoryList(for: UIDevice.current.userInterfaceIdiom == .pad ? .ipad : .iphone)

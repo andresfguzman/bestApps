@@ -32,9 +32,9 @@ class AppDetailsViewController: BaseViewController, AppDetailsView {
         appDescription.text = model.app_summary
         buttonUrl.setTitle(model.app_link, for: .normal)
         if model.app_price == "0.00000"{
-            appPrice.text = "Precio: Gratuita"
+            appPrice.text = String(format: "AppDetails.price".localized, "Gratuita")
         } else {
-            appPrice.text = "Precio: \(String(describing: model.app_price))"
+            appPrice.text = String(format: "AppDetails.price".localized, model.app_price!)
         }
     }
     

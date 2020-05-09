@@ -17,16 +17,12 @@ enum ServiceResult {
 typealias ServiceResponse = (ServiceResult) -> Void
 
 class GlobalClass: NSObject {
-    
-    
+
     static let Instance = GlobalClass()
-    
-    let mainServiceURL = NSLocalizedString("general_webservice", comment: "")
     
     func obtainMainService(with closure: @escaping ServiceResponse) {
         
-        Alamofire.request(mainServiceURL, method: .get).responseJSON { (service) -> Void in
-            
+        Alamofire.request(Environment.apiURL, method: .get).responseJSON { (service) -> Void in
             switch service.result{
             case .failure(let error):
                 closure(.failure(error: error))
