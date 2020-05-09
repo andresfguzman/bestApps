@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        #if compiler(>=5.1)
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
+        #endif
         let vc = SplashRouter.buildModule()
         let navController = UINavigationController(rootViewController: vc)
         setRoot(with: navController)
@@ -23,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setRoot(with viewController: UIViewController) {
-        window = UIWindow(frame: UIScreen.main.bounds)
+//        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }

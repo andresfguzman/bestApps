@@ -1,28 +1,20 @@
 PODS:
-  - Alamofire (4.9.1)
-  - EasyAnimation (2.2.1)
   - KFSwiftImageLoader (4.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire
-  - EasyAnimation
   - KFSwiftImageLoader
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
-    - Alamofire
-    - EasyAnimation
     - KFSwiftImageLoader
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  EasyAnimation: 226d133d23ef0ef99ddfb8928ff2a9a4a77d1cfd
   KFSwiftImageLoader: f6edb1af1c9ed23906509d4db7e00edc1086228b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: afb484c19d89e4e340b17e3f1d8a912862afd964
+PODFILE CHECKSUM: 2a866fd5e0c668718118fd817837efc712702d4c
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

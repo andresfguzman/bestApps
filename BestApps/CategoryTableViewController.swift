@@ -19,7 +19,6 @@ class CategoryTableViewController: UITableViewController, CategoryListView {
         super.viewDidLoad()
         presenter.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
-        self.title = "General.NavBar.Title".localized
     }
     
     // MARK: TABLEVIEW SETUP
@@ -53,10 +52,10 @@ class CategoryTableViewController: UITableViewController, CategoryListView {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell") as! CategoryTableViewCell
         cell.categoryName.text = cellCategory.cat_name//appCategories![indexPath.section].cat_name
         cell.categoryImage.image = UIImage(named: cellCategory.cat_name!)
-        cell.categoryCellContent.layer.cornerRadius = 15
+        cell.categoryCellContent.layer.cornerRadius = 10
         cell.categoryCellContent.clipsToBounds = true
-        cell.categoryCellContent.layer.borderWidth = 3.0
-        cell.categoryCellContent.layer.borderColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1).cgColor
+        cell.categoryCellContent.layer.borderWidth = 1.0
+        cell.categoryCellContent.layer.borderColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 0.6).cgColor
         return cell
         
     }

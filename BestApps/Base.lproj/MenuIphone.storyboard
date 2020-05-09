@@ -88,67 +88,31 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="games_category" translatesAutoresizingMaskIntoConstraints="NO" id="0kA-40-iqb">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDk-Vw-O7C">
-                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ipH-EX-YwI">
+                                            <rect key="frame" x="8" y="8" width="398" height="74"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="games" translatesAutoresizingMaskIntoConstraints="NO" id="0kA-40-iqb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="74"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="55" id="hNF-cO-kDX"/>
+                                                        <constraint firstAttribute="height" constant="55" id="nAb-5R-MtB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDk-Vw-O7C">
+                                                    <rect key="frame" x="55" y="0.0" width="343" height="74"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="JDk-Vw-O7C" firstAttribute="top" secondItem="HJy-OM-tbi" secondAttribute="top" constant="8" id="JnF-IF-2Qn"/>
-                                        <constraint firstItem="0kA-40-iqb" firstAttribute="top" secondItem="HJy-OM-tbi" secondAttribute="top" id="OYt-b3-fNS"/>
-                                        <constraint firstItem="0kA-40-iqb" firstAttribute="width" secondItem="HJy-OM-tbi" secondAttribute="width" multiplier="0.2" id="WOd-qW-YWP"/>
-                                        <constraint firstItem="0kA-40-iqb" firstAttribute="leading" secondItem="HJy-OM-tbi" secondAttribute="leading" constant="8" id="aHc-fX-4YQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="JDk-Vw-O7C" secondAttribute="bottom" constant="8" id="aIq-8M-X1E"/>
-                                        <constraint firstItem="0kA-40-iqb" firstAttribute="top" secondItem="HJy-OM-tbi" secondAttribute="top" constant="8" id="bOK-Po-7lx"/>
-                                        <constraint firstItem="0kA-40-iqb" firstAttribute="leading" secondItem="HJy-OM-tbi" secondAttribute="leading" id="dcW-qp-Yku"/>
-                                        <constraint firstAttribute="trailing" secondItem="JDk-Vw-O7C" secondAttribute="trailing" constant="8" id="qP8-F1-F0a"/>
-                                        <constraint firstAttribute="bottom" secondItem="0kA-40-iqb" secondAttribute="bottom" id="sp3-RY-a7F"/>
-                                        <constraint firstAttribute="bottom" secondItem="0kA-40-iqb" secondAttribute="bottom" constant="8" id="ttA-sk-AKB"/>
-                                        <constraint firstItem="JDk-Vw-O7C" firstAttribute="leading" secondItem="0kA-40-iqb" secondAttribute="trailing" constant="8" id="uEO-6Z-Jem"/>
+                                        <constraint firstItem="ipH-EX-YwI" firstAttribute="leading" secondItem="HJy-OM-tbi" secondAttribute="leading" constant="8" id="4GG-vN-EjQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ipH-EX-YwI" secondAttribute="trailing" constant="8" id="95k-jX-0k2"/>
+                                        <constraint firstAttribute="bottom" secondItem="ipH-EX-YwI" secondAttribute="bottom" constant="8" id="WEw-5D-EDa"/>
+                                        <constraint firstItem="ipH-EX-YwI" firstAttribute="top" secondItem="HJy-OM-tbi" secondAttribute="top" constant="8" id="Xle-1m-gty"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="subviews">
-                                            <exclude reference="0kA-40-iqb"/>
-                                            <exclude reference="JDk-Vw-O7C"/>
-                                        </mask>
-                                        <mask key="constraints">
-                                            <exclude reference="JnF-IF-2Qn"/>
-                                            <exclude reference="aIq-8M-X1E"/>
-                                            <exclude reference="qP8-F1-F0a"/>
-                                            <exclude reference="uEO-6Z-Jem"/>
-                                            <exclude reference="OYt-b3-fNS"/>
-                                            <exclude reference="WOd-qW-YWP"/>
-                                            <exclude reference="aHc-fX-4YQ"/>
-                                            <exclude reference="bOK-Po-7lx"/>
-                                            <exclude reference="dcW-qp-Yku"/>
-                                            <exclude reference="sp3-RY-a7F"/>
-                                            <exclude reference="ttA-sk-AKB"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="heightClass=compact">
-                                        <mask key="subviews">
-                                            <include reference="0kA-40-iqb"/>
-                                            <include reference="JDk-Vw-O7C"/>
-                                        </mask>
-                                        <mask key="constraints">
-                                            <include reference="JnF-IF-2Qn"/>
-                                            <include reference="aIq-8M-X1E"/>
-                                            <include reference="qP8-F1-F0a"/>
-                                            <include reference="uEO-6Z-Jem"/>
-                                            <exclude reference="OYt-b3-fNS"/>
-                                            <include reference="WOd-qW-YWP"/>
-                                            <include reference="aHc-fX-4YQ"/>
-                                            <include reference="bOK-Po-7lx"/>
-                                            <exclude reference="dcW-qp-Yku"/>
-                                            <exclude reference="sp3-RY-a7F"/>
-                                            <include reference="ttA-sk-AKB"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoryCellContent" destination="HJy-OM-tbi" id="Ypa-L5-Bed"/>
@@ -248,7 +212,7 @@
     </scenes>
     <resources>
         <image name="appbg" width="347" height="600"/>
-        <image name="games_category" width="310" height="193.5"/>
+        <image name="games" width="79.5" height="58.5"/>
         <image name="logo" width="164" height="39.5"/>
         <image name="splasImage" width="512" height="315"/>
         <image name="splashlogo" width="348.5" height="81"/>
