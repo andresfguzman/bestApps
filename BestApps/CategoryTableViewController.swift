@@ -18,6 +18,7 @@ class CategoryTableViewController: UITableViewController, CategoryListView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        tableView.register(CategoryTableViewCell.self, forCellReuseIdentifier: String(describing: CategoryTableViewCell.self))
         self.navigationController?.isNavigationBarHidden = false
     }
     
@@ -49,13 +50,8 @@ class CategoryTableViewController: UITableViewController, CategoryListView {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellCategory = presenter.getCategory(at: indexPath.section)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell") as! CategoryTableViewCell
-        cell.categoryName.text = cellCategory.cat_name//appCategories![indexPath.section].cat_name
-        cell.categoryImage.image = UIImage(named: cellCategory.cat_name!)
-        cell.categoryCellContent.layer.cornerRadius = 10
-        cell.categoryCellContent.clipsToBounds = true
-        cell.categoryCellContent.layer.borderWidth = 1.0
-        cell.categoryCellContent.layer.borderColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 0.6).cgColor
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CategoryTableViewCell.self)) as! CategoryTableViewCell
+        cell.configure(with: cellCategory)
         return cell
         
     }

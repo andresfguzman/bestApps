@@ -75,53 +75,11 @@
         <scene sceneID="Vw8-oP-Plt">
             <objects>
                 <tableViewController storyboardIdentifier="CategoryTableViewController" id="Wdi-VI-p1g" customClass="CategoryTableViewController" customModule="BestApps" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZyH-Bu-0h8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZyH-Bu-0h8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.85556891025641024" green="0.85556891025641024" blue="0.85556891025641024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="90" id="OTd-q9-uuf" customClass="CategoryTableViewCell" customModule="BestApps" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTd-q9-uuf" id="HJy-OM-tbi">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ipH-EX-YwI">
-                                            <rect key="frame" x="8" y="8" width="398" height="74"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="games" translatesAutoresizingMaskIntoConstraints="NO" id="0kA-40-iqb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="74"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="55" id="hNF-cO-kDX"/>
-                                                        <constraint firstAttribute="height" constant="55" id="nAb-5R-MtB"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDk-Vw-O7C">
-                                                    <rect key="frame" x="55" y="0.0" width="343" height="74"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="ipH-EX-YwI" firstAttribute="leading" secondItem="HJy-OM-tbi" secondAttribute="leading" constant="8" id="4GG-vN-EjQ"/>
-                                        <constraint firstAttribute="trailing" secondItem="ipH-EX-YwI" secondAttribute="trailing" constant="8" id="95k-jX-0k2"/>
-                                        <constraint firstAttribute="bottom" secondItem="ipH-EX-YwI" secondAttribute="bottom" constant="8" id="WEw-5D-EDa"/>
-                                        <constraint firstItem="ipH-EX-YwI" firstAttribute="top" secondItem="HJy-OM-tbi" secondAttribute="top" constant="8" id="Xle-1m-gty"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="categoryCellContent" destination="HJy-OM-tbi" id="Ypa-L5-Bed"/>
-                                    <outlet property="categoryImage" destination="0kA-40-iqb" id="xS5-hF-SyN"/>
-                                    <outlet property="categoryName" destination="JDk-Vw-O7C" id="HK7-1V-6ZL"/>
-                                    <outlet property="contentView" destination="HJy-OM-tbi" id="rcq-Zr-2KQ"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Wdi-VI-p1g" id="OzC-L4-TMb"/>
                             <outlet property="delegate" destination="Wdi-VI-p1g" id="y0l-u8-RBd"/>
@@ -212,7 +170,6 @@
     </scenes>
     <resources>
         <image name="appbg" width="347" height="600"/>
-        <image name="games" width="79.5" height="58.5"/>
         <image name="logo" width="164" height="39.5"/>
         <image name="splasImage" width="512" height="315"/>
         <image name="splashlogo" width="348.5" height="81"/>

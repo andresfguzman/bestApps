@@ -10,25 +10,18 @@ import UIKit
 
 class AppCollectionViewCell: UICollectionViewCell {
     
-    
     var textLabel: UILabel!
-    //var imageButton : UIButton!
     var imageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1)
-        //imageButton = UIButton(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height*8/10))
         imageView = UIImageView()
-        //imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height*8/10))
-        //imageButton.contentMode = UIViewContentMode.ScaleToFill
         imageView.clipsToBounds = true
         imageView.contentMode = UIView.ContentMode.scaleToFill
         contentView.addSubview(imageView)
         
         textLabel = UILabel()
-        //textLabel = UILabel(frame: CGRect(x: 1, y: imageView.frame.size.height, width: frame.size.width-2, height: frame.size.height*2/10-2))
-        //textLabel.font = UIFont.systemFontOfSize(UIFont.buttonFontSize())
         textLabel.font = UIFont.boldSystemFont(ofSize: UIFont.buttonFontSize)
         textLabel.textAlignment = .center
         textLabel.numberOfLines = 0
@@ -37,8 +30,6 @@ class AppCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = nil
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 10
-        //contentView.layer.borderWidth = 2.0
-        //contentView.layer.borderColor = UIColor.grayColor().CGColor
         contentView.addSubview(textLabel)
         
         

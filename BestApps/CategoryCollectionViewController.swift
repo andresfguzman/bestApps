@@ -21,11 +21,10 @@ class CategoryCollectionViewController: UICollectionViewController, CategoryList
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         self.title = "General.NavBar.Title".localized
+        presenter.viewDidLoad()
         setupCollectionView()
         // Register cell classes
         self.collectionView!.register(AppCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        // Do any additional setup after loading the view.
     }
     
     // Método para agregar margenes y especificaciones adicionales al collection view.
