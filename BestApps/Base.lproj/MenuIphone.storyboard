@@ -17,55 +17,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splasImage" translatesAutoresizingMaskIntoConstraints="NO" id="MOZ-Zs-b6v">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTM-zV-Lhn">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aUG-cH-jQm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Amw-uv-Jt7">
-                                <rect key="frame" x="0.0" y="695" width="414" height="81"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando app..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="YX6-cA-rDf">
-                                <rect key="frame" x="149.5" y="828" width="115" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pEd-xT-pBf">
-                                <rect key="frame" x="197" y="792" width="20" height="20"/>
-                            </activityIndicatorView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Amw-uv-Jt7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="3VJ-kB-sot"/>
-                            <constraint firstAttribute="trailing" secondItem="TTM-zV-Lhn" secondAttribute="trailing" id="5HM-hB-5A4"/>
-                            <constraint firstAttribute="bottom" secondItem="MOZ-Zs-b6v" secondAttribute="bottom" id="ALo-mA-ERK"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YX6-cA-rDf" secondAttribute="bottom" constant="16" id="Fbr-fz-0cl"/>
-                            <constraint firstItem="pEd-xT-pBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LDa-Gv-tBM"/>
-                            <constraint firstItem="TTM-zV-Lhn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mxs-CG-g0q"/>
-                            <constraint firstAttribute="bottom" secondItem="TTM-zV-Lhn" secondAttribute="bottom" id="OtO-hU-55V"/>
-                            <constraint firstItem="MOZ-Zs-b6v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PJa-MV-orR"/>
-                            <constraint firstItem="TTM-zV-Lhn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YDK-bz-0Ah"/>
-                            <constraint firstAttribute="trailing" secondItem="MOZ-Zs-b6v" secondAttribute="trailing" id="dQI-GI-cJV"/>
-                            <constraint firstItem="YX6-cA-rDf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lpA-02-TuA"/>
-                            <constraint firstItem="Amw-uv-Jt7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rP7-sx-vth"/>
-                            <constraint firstItem="pEd-xT-pBf" firstAttribute="top" secondItem="Amw-uv-Jt7" secondAttribute="bottom" constant="16" id="w8n-lK-aZT"/>
-                            <constraint firstItem="MOZ-Zs-b6v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wug-6Z-t61"/>
-                            <constraint firstItem="YX6-cA-rDf" firstAttribute="top" secondItem="pEd-xT-pBf" secondAttribute="bottom" constant="16" id="zdw-lW-4Ds"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="j3a-7I-uXB"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="activityIndicator" destination="pEd-xT-pBf" id="qlE-F6-sRj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +125,5 @@
     <resources>
         <image name="appbg" width="347" height="600"/>
         <image name="logo" width="164" height="39.5"/>
-        <image name="splasImage" width="512" height="315"/>
-        <image name="splashlogo" width="348.5" height="81"/>
     </resources>
 </document>

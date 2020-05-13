@@ -14,7 +14,6 @@ final class SplashPresenter: SplashPresenterProtocol {
     var interactor: SplashInteractorProtocol!
     
     func viewDidLoad() {
-        view.showLoadingView()
         interactor.getData()
     }
 }
@@ -22,7 +21,6 @@ final class SplashPresenter: SplashPresenterProtocol {
 extension SplashPresenter: SplashInteractorOutput {
     
     func getDataSucceeds() {
-        view.hideLoadingView()
         router.goToCategoryList(for: UIDevice.current.userInterfaceIdiom == .pad ? .ipad : .iphone)
     }
     

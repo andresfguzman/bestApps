@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import Lottie
 
 protocol SplashView: AnyObject {
     var presenter: SplashPresenterProtocol! { get set }
-    func showLoadingView()
-    func hideLoadingView()
+    var loaderView: AnimationView! { get set }
 }
 
 protocol SplashPresenterProtocol: AnyObject {

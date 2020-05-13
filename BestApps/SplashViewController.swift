@@ -7,27 +7,28 @@
 //
 
 import UIKit
+import Lottie
 
 class SplashViewController: BaseViewController, SplashView {
-    
+    var loaderView: AnimationView!
     var presenter: SplashPresenterProtocol!
-    
-    // MARK: UI Elements
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: OVERRIDE METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        presenter.viewDidLoad()
-    }
-    
-    func showLoadingView() {
-        activityIndicator.startAnimating()
-    }
-    
-    func hideLoadingView() {
-        activityIndicator.stopAnimating()
+        let loaderView = AnimationView(name: "Splash")
+        
+        loaderView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        loaderView.center = self.view.center
+        loaderView.contentMode = .scaleAspectFill
+        loaderView.loopMode = .playOnce
+        
+        view.addSubview(loaderView)
+        
+        loaderView.play { [weak self] (_) in
+            self?.presenter.viewDidLoad()
+        }
     }
 }
