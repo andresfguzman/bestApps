@@ -7,5 +7,4 @@ target 'BestApps' do
 
   # Pods for BestApps
   pod 'SwiftyJSON',:modular_headers => true
-  pod 'KFSwiftImageLoader',:modular_headers => true
 end

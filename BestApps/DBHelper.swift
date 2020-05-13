@@ -13,8 +13,7 @@ import CoreData
 class DBHelper: NSObject {
     
     static let Instance = DBHelper()
-    
-    
+
     /*
      Método para guardar todos los elementos recibidos en el Json del webservice (apps con sus atributos)
      Este método actualiza los datos si ya existen en la base de datos y si no los crea.
@@ -42,7 +41,7 @@ class DBHelper: NSObject {
                         currentApp.app_name = app["im:name"]["label"].stringValue
                         currentApp.app_summary = app["summary"]["label"].stringValue
                         currentApp.app_price = app["im:price"]["attributes"]["amount"].stringValue
-                        currentApp.app_link = app["link"]["attributes"]["href"].stringValue
+                        currentApp.app_link = app["link"][0]["attributes"]["href"].stringValue
                         currentApp.cat_id = app["category"]["attributes"]["im:id"].stringValue
                         currentApp.app_image1 = app["im:image"][0]["label"].stringValue
                         currentApp.app_image2 = app["im:image"][1]["label"].stringValue

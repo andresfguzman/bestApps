@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KFSwiftImageLoader
 
 private let reuseIdentifier = "Cell"
 
@@ -60,7 +59,7 @@ class AppsCollectionViewController: UICollectionViewController, AppListView {
         let appAtIndex = presenter.getApp(at: indexPath.item)
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! AppCollectionViewCell
-        cell.imageView.loadImage(urlString: appAtIndex.app_image1!)
+        cell.imageView.load(from: appAtIndex.app_image2 ?? "")
         cell.textLabel.text = appAtIndex.app_name
         return cell
     }

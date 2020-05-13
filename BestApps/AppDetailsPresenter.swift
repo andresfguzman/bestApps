@@ -22,8 +22,8 @@ final class AppDetailsPresenter: AppDetailsPresenterProtocol {
     }
     
     func didTapOpenUrl() {
-        // TODO: manage force unwrapping.
-        router.openUrl(with: URL(string: appModel.app_link!)!)
+        guard let appLink = appModel.app_link, let appStoreURL = URL(string: appLink) else { return }
+        router.openUrl(with: appStoreURL)
     }
 }
 

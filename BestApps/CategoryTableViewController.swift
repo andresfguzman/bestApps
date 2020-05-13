@@ -56,10 +56,6 @@ class CategoryTableViewController: UITableViewController, CategoryListView {
         
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        //CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformWave, andDuration: 0.5)
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentCell = tableView.cellForRow(at: indexPath)
         

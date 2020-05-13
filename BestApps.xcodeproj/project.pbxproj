@@ -28,7 +28,8 @@
 		7E05909B24674B900079F9CF /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05909A24674B900079F9CF /* Environment.swift */; };
 		7E05909E24674CA50079F9CF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05909D24674CA50079F9CF /* String+Extension.swift */; };
 		7E0590A32467697D0079F9CF /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E0590A22467697D0079F9CF /* CategoryTableViewCell.xib */; };
-		7E3FB6B41C6E550600CCE041 /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3FB6B31C6E550600CCE041 /* CellAnimator.swift */; };
+		7E23D499246BA2E200907780 /* URLSession+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23D498246BA2E200907780 /* URLSession+Result.swift */; };
+		7E23D49B246BA5FC00907780 /* UIImageView+LoadFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23D49A246BA5FC00907780 /* UIImageView+LoadFromURL.swift */; };
 		7E8941AA1C6C03BB00FF1B6B /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */; };
 		7E8941AD1C6C03E900FF1B6B /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941AC1C6C03E900FF1B6B /* CategoryTableViewCell.swift */; };
 		7E8941B11C6C0F7F00FF1B6B /* AppsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8941B01C6C0F7F00FF1B6B /* AppsView.storyboard */; };
@@ -73,7 +74,8 @@
 		7E05909A24674B900079F9CF /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		7E05909D24674CA50079F9CF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7E0590A22467697D0079F9CF /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
-		7E3FB6B31C6E550600CCE041 /* CellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
+		7E23D498246BA2E200907780 /* URLSession+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Result.swift"; sourceTree = "<group>"; };
+		7E23D49A246BA5FC00907780 /* UIImageView+LoadFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadFromURL.swift"; sourceTree = "<group>"; };
 		7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		7E8941AC1C6C03E900FF1B6B /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		7E8941B01C6C0F7F00FF1B6B /* AppsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppsView.storyboard; sourceTree = "<group>"; };
@@ -351,6 +353,8 @@
 			isa = PBXGroup;
 			children = (
 				7E05909D24674CA50079F9CF /* String+Extension.swift */,
+				7E23D498246BA2E200907780 /* URLSession+Result.swift */,
+				7E23D49A246BA5FC00907780 /* UIImageView+LoadFromURL.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -433,7 +437,6 @@
 			children = (
 				7EA2591A1C6AB13500906FD4 /* DBHelper.swift */,
 				7EA2591C1C6AB14E00906FD4 /* GlobalClass.swift */,
-				7E3FB6B31C6E550600CCE041 /* CellAnimator.swift */,
 				7E05909A24674B900079F9CF /* Environment.swift */,
 			);
 			name = Helpers;
@@ -561,8 +564,8 @@
 				7E05908D24673B590079F9CF /* AppListRouter.swift in Sources */,
 				7E8941AA1C6C03BB00FF1B6B /* CategoryTableViewController.swift in Sources */,
 				7EA2591B1C6AB13500906FD4 /* DBHelper.swift in Sources */,
+				7E23D499246BA2E200907780 /* URLSession+Result.swift in Sources */,
 				7EA19FEA1C6D966F00959A9A /* AppDetailsViewController.swift in Sources */,
-				7E3FB6B41C6E550600CCE041 /* CellAnimator.swift in Sources */,
 				7EA258FF1C6AA9C200906FD4 /* AppDelegate.swift in Sources */,
 				7E8941B71C6C1AE400FF1B6B /* CategoryCollectionViewController.swift in Sources */,
 				7EA259171C6AACE000906FD4 /* SplashViewController.swift in Sources */,
@@ -576,6 +579,7 @@
 				7E8941B51C6C10AE00FF1B6B /* AppCollectionViewCell.swift in Sources */,
 				7E05907B24672A270079F9CF /* SplashPresenter.swift in Sources */,
 				7E05908B24673A000079F9CF /* AppListInteractor.swift in Sources */,
+				7E23D49B246BA5FC00907780 /* UIImageView+LoadFromURL.swift in Sources */,
 				7E05909B24674B900079F9CF /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

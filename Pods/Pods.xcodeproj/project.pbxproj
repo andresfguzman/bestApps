@@ -7,79 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		036F83AE99AA8AA3DAB6AB346F727B26 /* WKInterfaceImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DBB3E6CC5B241F3AA9829765B58742 /* WKInterfaceImageExtensions.swift */; };
-		08305CDF4AA9C65A23BB4E4C77D1A9E2 /* MKAnnotationViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C4FC198EE7FAD49B3EA03A2DD0A94 /* MKAnnotationViewExtensions.swift */; };
-		1C913B32FB99E285C1753F929CDC0DCF /* KFImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F8904129194BA41320B5736D4F005 /* KFImageCacheManager.swift */; };
-		2A1D62837E2417CDEA86A5EE5F1FBD93 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F8E8CD76B20D174F6B719A82C0E9F /* UIButtonExtensions.swift */; };
-		5BB560B8F9D6242C930B6243193FB7F3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5007205A52494E11A0AA3AB766C24 /* SwiftyJSON.swift */; };
-		78B722818676A5D59EECF95EDCA5FF8D /* Pods-BestApps-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8C4F3CD2E76A6264B53063BD9F1EF1 /* Pods-BestApps-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		97DE1D91512721CF78373B8C641C2A29 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 362AAD4F7BA106F193B292875E5CF85A /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9D722CEF0752AEA7629A5DF8D83F4050 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9769EBE8915AD0C8EC2F44D295856FF /* SwiftyJSON-dummy.m */; };
-		AB93661011B3F36EB060AFDE1AE132A1 /* Pods-BestApps-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18B128A9614B02947B89AADB06AAE /* Pods-BestApps-dummy.m */; };
-		B9402BFA9E16123DA81D3ACA100CFD11 /* KFSwiftImageLoader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C3D7CB11092666534A0E6DAAD5FA64B /* KFSwiftImageLoader-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E42B6121E3E26C89C3F7D7A6E64B2104 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC15F1B25C6B702826F2E85D642156C /* UIImageViewExtensions.swift */; };
-		EDBF2DC34B470BC05E33D21B67284F81 /* KFSwiftImageLoader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAAD7EF14441D49171A5F663730BD84 /* KFSwiftImageLoader-dummy.m */; };
-		F7FCBDF4FC1600F25DDDA1DD61B2FA80 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FB3E8D5689E48FB31B04B84C4AC57C /* Utilities.swift */; };
+		39467F691F701D90F0EA55DF8C89A2DE /* Pods-BestApps-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18B128A9614B02947B89AADB06AAE /* Pods-BestApps-dummy.m */; };
+		5BB560B8F9D6242C930B6243193FB7F3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBD0D3576836D87BFE122FD7BA5E07 /* SwiftyJSON.swift */; };
+		97DE1D91512721CF78373B8C641C2A29 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A63693654B2837642E3010D90C68A95 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D722CEF0752AEA7629A5DF8D83F4050 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7400E536DED12F05F9E7610AC2C94699 /* SwiftyJSON-dummy.m */; };
+		D6EC683AFC7604144939BC824D41B23F /* Pods-BestApps-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8C4F3CD2E76A6264B53063BD9F1EF1 /* Pods-BestApps-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		37EB351DD08D829CE4347B44D502C0A7 /* PBXContainerItemProxy */ = {
+		1620AEDFE4ADEC78ED63B042978CEFC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
 			remoteInfo = SwiftyJSON;
 		};
-		B803E7E1DB713A19A67CA433342876D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CBD1628EA00327911BD3A5A73B2E2BC5;
-			remoteInfo = KFSwiftImageLoader;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02C18B128A9614B02947B89AADB06AAE /* Pods-BestApps-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BestApps-dummy.m"; sourceTree = "<group>"; };
-		0552C3B93C4E3D11FBE4126128D55EDE /* KFSwiftImageLoader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KFSwiftImageLoader.modulemap; sourceTree = "<group>"; };
 		09559903560D5604EE036263BBB4985F /* Pods-BestApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BestApps.debug.xcconfig"; sourceTree = "<group>"; };
+		0CDBD0D3576836D87BFE122FD7BA5E07 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
 		2C8C4F3CD2E76A6264B53063BD9F1EF1 /* Pods-BestApps-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BestApps-umbrella.h"; sourceTree = "<group>"; };
-		317F9D5D1B6C4398DCAE70008295671E /* SwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.debug.xcconfig; sourceTree = "<group>"; };
 		321553B7E6FB32F83DFBCBFA19EC8E96 /* Pods-BestApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BestApps.release.xcconfig"; sourceTree = "<group>"; };
-		362AAD4F7BA106F193B292875E5CF85A /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		58A5007205A52494E11A0AA3AB766C24 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
-		623F8904129194BA41320B5736D4F005 /* KFImageCacheManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImageCacheManager.swift; path = KFSwiftImageLoader/Managers/KFImageCacheManager.swift; sourceTree = "<group>"; };
+		4630622BC5027F4749EEC719F2E33F37 /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
 		69E1AE24EB1A0ACC77C5929631C5B351 /* Pods-BestApps.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BestApps.modulemap"; sourceTree = "<group>"; };
-		71043A9BEB816FCA3AEFAFD23725E54B /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		7400E536DED12F05F9E7610AC2C94699 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		76953A0E6907F8EC45679B9E34B1157E /* Pods-BestApps-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BestApps-acknowledgements.plist"; sourceTree = "<group>"; };
-		7B6920328063F980F61FE19F8C624A85 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		7C3B8465441E82E71EBE82EB2AAC49C8 /* Pods-BestApps-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BestApps-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7C3D7CB11092666534A0E6DAAD5FA64B /* KFSwiftImageLoader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KFSwiftImageLoader-umbrella.h"; sourceTree = "<group>"; };
-		841C4FC198EE7FAD49B3EA03A2DD0A94 /* MKAnnotationViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKAnnotationViewExtensions.swift; path = KFSwiftImageLoader/Extensions/MKAnnotationViewExtensions.swift; sourceTree = "<group>"; };
+		8371949ED38C97436FEB28AFB937BD6C /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		8ABC361C64A96E868EBC2D0F5716757F /* SwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.debug.xcconfig; sourceTree = "<group>"; };
+		9A63693654B2837642E3010D90C68A95 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FC15F1B25C6B702826F2E85D642156C /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtensions.swift; path = KFSwiftImageLoader/Extensions/UIImageViewExtensions.swift; sourceTree = "<group>"; };
-		AD0E2A05B7DD0C4ADC0D45F324365F41 /* libKFSwiftImageLoader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKFSwiftImageLoader.a; path = libKFSwiftImageLoader.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B35F8E8CD76B20D174F6B719A82C0E9F /* UIButtonExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtensions.swift; path = KFSwiftImageLoader/Extensions/UIButtonExtensions.swift; sourceTree = "<group>"; };
-		B5DBB3E6CC5B241F3AA9829765B58742 /* WKInterfaceImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKInterfaceImageExtensions.swift; path = KFSwiftImageLoader/Extensions/WKInterfaceImageExtensions.swift; sourceTree = "<group>"; };
-		CBAAD7EF14441D49171A5F663730BD84 /* KFSwiftImageLoader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KFSwiftImageLoader-dummy.m"; sourceTree = "<group>"; };
+		BBAAC6BC85F9701C4475A2A0CF28D3CF /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		DD493318CE28B510EE273816A8272378 /* libPods-BestApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BestApps.a"; path = "libPods-BestApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDEA520BEC64DDBD7E4D193A3B938A13 /* KFSwiftImageLoader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KFSwiftImageLoader-prefix.pch"; sourceTree = "<group>"; };
 		E23C076BA70925415F490FEDB215DA92 /* libSwiftyJSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftyJSON.a; path = libSwiftyJSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4FB3E8D5689E48FB31B04B84C4AC57C /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = KFSwiftImageLoader/Miscellaneous/Utilities.swift; sourceTree = "<group>"; };
-		ED13F8F6D3D4284031479BB571EB0120 /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
-		F3680FA199D036C655599EA1470F2154 /* KFSwiftImageLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KFSwiftImageLoader.release.xcconfig; sourceTree = "<group>"; };
-		F36BAC308523A35638BBFAF26E5E3534 /* KFSwiftImageLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KFSwiftImageLoader.debug.xcconfig; sourceTree = "<group>"; };
-		F9769EBE8915AD0C8EC2F44D295856FF /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		17C3006831CA7FE398CA0ABC693682CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		35D78C840767341E5B9F259F7FBA8127 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,7 +52,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F359C4799C6462008B33D4A396020B0C /* Frameworks */ = {
+		E3CB7E96670646994C410ED30EFA1FE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,47 +62,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		186BE7AD8F008164F2DDFC9CF12A9F9B /* Support Files */ = {
+		2C6A71D462ED46C2A7F74D962134DC74 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7B6920328063F980F61FE19F8C624A85 /* SwiftyJSON.modulemap */,
-				F9769EBE8915AD0C8EC2F44D295856FF /* SwiftyJSON-dummy.m */,
-				71043A9BEB816FCA3AEFAFD23725E54B /* SwiftyJSON-prefix.pch */,
-				362AAD4F7BA106F193B292875E5CF85A /* SwiftyJSON-umbrella.h */,
-				317F9D5D1B6C4398DCAE70008295671E /* SwiftyJSON.debug.xcconfig */,
-				ED13F8F6D3D4284031479BB571EB0120 /* SwiftyJSON.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		275EFE8180751A3C1D9F054C34EDA132 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AA67504C8F7302DE7276A79F323357CD /* KFSwiftImageLoader */,
-				8A163F9B776102E73AA770427061D520 /* SwiftyJSON */,
+				36AB58DCE8747D206B69D48084D7CBB2 /* SwiftyJSON */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7FF389F7E36C00A0A0ED18B5C0DBDB04 /* Products */ = {
+		36AB58DCE8747D206B69D48084D7CBB2 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				AD0E2A05B7DD0C4ADC0D45F324365F41 /* libKFSwiftImageLoader.a */,
-				DD493318CE28B510EE273816A8272378 /* libPods-BestApps.a */,
-				E23C076BA70925415F490FEDB215DA92 /* libSwiftyJSON.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8A163F9B776102E73AA770427061D520 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				58A5007205A52494E11A0AA3AB766C24 /* SwiftyJSON.swift */,
-				186BE7AD8F008164F2DDFC9CF12A9F9B /* Support Files */,
+				0CDBD0D3576836D87BFE122FD7BA5E07 /* SwiftyJSON.swift */,
+				5276F0CCCA237287D236E26D8FD2EC24 /* Support Files */,
 			);
 			name = SwiftyJSON;
 			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		5276F0CCCA237287D236E26D8FD2EC24 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8371949ED38C97436FEB28AFB937BD6C /* SwiftyJSON.modulemap */,
+				7400E536DED12F05F9E7610AC2C94699 /* SwiftyJSON-dummy.m */,
+				BBAAC6BC85F9701C4475A2A0CF28D3CF /* SwiftyJSON-prefix.pch */,
+				9A63693654B2837642E3010D90C68A95 /* SwiftyJSON-umbrella.h */,
+				8ABC361C64A96E868EBC2D0F5716757F /* SwiftyJSON.debug.xcconfig */,
+				4630622BC5027F4749EEC719F2E33F37 /* SwiftyJSON.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		9887F7B5909D218074D3622ADFC3CCAD /* Targets Support Files */ = {
@@ -163,28 +117,13 @@
 			path = "Target Support Files/Pods-BestApps";
 			sourceTree = "<group>";
 		};
-		AA67504C8F7302DE7276A79F323357CD /* KFSwiftImageLoader */ = {
-			isa = PBXGroup;
-			children = (
-				623F8904129194BA41320B5736D4F005 /* KFImageCacheManager.swift */,
-				841C4FC198EE7FAD49B3EA03A2DD0A94 /* MKAnnotationViewExtensions.swift */,
-				B35F8E8CD76B20D174F6B719A82C0E9F /* UIButtonExtensions.swift */,
-				9FC15F1B25C6B702826F2E85D642156C /* UIImageViewExtensions.swift */,
-				E4FB3E8D5689E48FB31B04B84C4AC57C /* Utilities.swift */,
-				B5DBB3E6CC5B241F3AA9829765B58742 /* WKInterfaceImageExtensions.swift */,
-				D8D75746F87F88FEFDFFA5CD21DFEB3C /* Support Files */,
-			);
-			name = KFSwiftImageLoader;
-			path = KFSwiftImageLoader;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				275EFE8180751A3C1D9F054C34EDA132 /* Pods */,
-				7FF389F7E36C00A0A0ED18B5C0DBDB04 /* Products */,
+				2C6A71D462ED46C2A7F74D962134DC74 /* Pods */,
+				FD896F24829F5FA939F5C882F6305491 /* Products */,
 				9887F7B5909D218074D3622ADFC3CCAD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -196,39 +135,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D8D75746F87F88FEFDFFA5CD21DFEB3C /* Support Files */ = {
+		FD896F24829F5FA939F5C882F6305491 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0552C3B93C4E3D11FBE4126128D55EDE /* KFSwiftImageLoader.modulemap */,
-				CBAAD7EF14441D49171A5F663730BD84 /* KFSwiftImageLoader-dummy.m */,
-				DDEA520BEC64DDBD7E4D193A3B938A13 /* KFSwiftImageLoader-prefix.pch */,
-				7C3D7CB11092666534A0E6DAAD5FA64B /* KFSwiftImageLoader-umbrella.h */,
-				F36BAC308523A35638BBFAF26E5E3534 /* KFSwiftImageLoader.debug.xcconfig */,
-				F3680FA199D036C655599EA1470F2154 /* KFSwiftImageLoader.release.xcconfig */,
+				DD493318CE28B510EE273816A8272378 /* libPods-BestApps.a */,
+				E23C076BA70925415F490FEDB215DA92 /* libSwiftyJSON.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/KFSwiftImageLoader";
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1E797139A7BFA4A7A92C4D2888C08D45 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78B722818676A5D59EECF95EDCA5FF8D /* Pods-BestApps-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		307F7CD723EB502E6A05B98166A4F57E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9402BFA9E16123DA81D3ACA100CFD11 /* KFSwiftImageLoader-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8FA28DEE4DBB28EBD34F2AB47038DEC8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,44 +155,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5905AAC0B602035016EE132B5BD5254 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EC683AFC7604144939BC824D41B23F /* Pods-BestApps-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3C1D807FF02A0BF11351AA688C27E6D6 /* Pods-BestApps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3270680B899F04379B8C1EC6AC78616 /* Build configuration list for PBXNativeTarget "Pods-BestApps" */;
+			buildConfigurationList = B97F3C64641E8414F8735044EDFB71CB /* Build configuration list for PBXNativeTarget "Pods-BestApps" */;
 			buildPhases = (
-				1E797139A7BFA4A7A92C4D2888C08D45 /* Headers */,
-				A4EAD6E3817CD5665D3326D821098084 /* Sources */,
-				17C3006831CA7FE398CA0ABC693682CB /* Frameworks */,
+				A5905AAC0B602035016EE132B5BD5254 /* Headers */,
+				B18AA38206685C6BCB60DF1E32C06676 /* Sources */,
+				E3CB7E96670646994C410ED30EFA1FE9 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F85369A6B3817FE617D8D326B97FD30A /* PBXTargetDependency */,
-				DD52E66332445978675AE23F4C1B5EF2 /* PBXTargetDependency */,
+				35540EDAF73CB5783877B04AC171A639 /* PBXTargetDependency */,
 			);
 			name = "Pods-BestApps";
 			productName = "Pods-BestApps";
 			productReference = DD493318CE28B510EE273816A8272378 /* libPods-BestApps.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		CBD1628EA00327911BD3A5A73B2E2BC5 /* KFSwiftImageLoader */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0EA0DB17274D7498A2129325C5FA8126 /* Build configuration list for PBXNativeTarget "KFSwiftImageLoader" */;
-			buildPhases = (
-				307F7CD723EB502E6A05B98166A4F57E /* Headers */,
-				8D35D6CD1A923860B36A6EC7E0E3E43C /* Sources */,
-				F359C4799C6462008B33D4A396020B0C /* Frameworks */,
-				8BD39ABDEA3420157C1055135CD6E189 /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = KFSwiftImageLoader;
-			productName = KFSwiftImageLoader;
-			productReference = AD0E2A05B7DD0C4ADC0D45F324365F41 /* libKFSwiftImageLoader.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
@@ -313,11 +220,10 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 7FF389F7E36C00A0A0ED18B5C0DBDB04 /* Products */;
+			productRefGroup = FD896F24829F5FA939F5C882F6305491 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CBD1628EA00327911BD3A5A73B2E2BC5 /* KFSwiftImageLoader */,
 				3C1D807FF02A0BF11351AA688C27E6D6 /* Pods-BestApps */,
 				D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */,
 			);
@@ -349,52 +255,14 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftyJSON/SwiftyJSON.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftyJSON/SwiftyJSON-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		8BD39ABDEA3420157C1055135CD6E189 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/KFSwiftImageLoader/KFSwiftImageLoader.modulemap",
-				"${PODS_ROOT}/Headers/Public/KFSwiftImageLoader/KFSwiftImageLoader-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/KFSwiftImageLoader-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KFSwiftImageLoader/KFSwiftImageLoader.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KFSwiftImageLoader/KFSwiftImageLoader-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8D35D6CD1A923860B36A6EC7E0E3E43C /* Sources */ = {
+		B18AA38206685C6BCB60DF1E32C06676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C913B32FB99E285C1753F929CDC0DCF /* KFImageCacheManager.swift in Sources */,
-				EDBF2DC34B470BC05E33D21B67284F81 /* KFSwiftImageLoader-dummy.m in Sources */,
-				08305CDF4AA9C65A23BB4E4C77D1A9E2 /* MKAnnotationViewExtensions.swift in Sources */,
-				2A1D62837E2417CDEA86A5EE5F1FBD93 /* UIButtonExtensions.swift in Sources */,
-				E42B6121E3E26C89C3F7D7A6E64B2104 /* UIImageViewExtensions.swift in Sources */,
-				F7FCBDF4FC1600F25DDDA1DD61B2FA80 /* Utilities.swift in Sources */,
-				036F83AE99AA8AA3DAB6AB346F727B26 /* WKInterfaceImageExtensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A4EAD6E3817CD5665D3326D821098084 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB93661011B3F36EB060AFDE1AE132A1 /* Pods-BestApps-dummy.m in Sources */,
+				39467F691F701D90F0EA55DF8C89A2DE /* Pods-BestApps-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,49 +278,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DD52E66332445978675AE23F4C1B5EF2 /* PBXTargetDependency */ = {
+		35540EDAF73CB5783877B04AC171A639 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
 			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
-			targetProxy = 37EB351DD08D829CE4347B44D502C0A7 /* PBXContainerItemProxy */;
-		};
-		F85369A6B3817FE617D8D326B97FD30A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KFSwiftImageLoader;
-			target = CBD1628EA00327911BD3A5A73B2E2BC5 /* KFSwiftImageLoader */;
-			targetProxy = B803E7E1DB713A19A67CA433342876D3 /* PBXContainerItemProxy */;
+			targetProxy = 1620AEDFE4ADEC78ED63B042978CEFC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		051C4E9ED9525770960D5D434883E891 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3680FA199D036C655599EA1470F2154 /* KFSwiftImageLoader.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KFSwiftImageLoader/KFSwiftImageLoader-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = Headers/Public/KFSwiftImageLoader/KFSwiftImageLoader.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KFSwiftImageLoader;
-				PRODUCT_NAME = KFSwiftImageLoader;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -515,7 +349,7 @@
 		};
 		3B0873BC3DEA78AB1572D9A81514031E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED13F8F6D3D4284031479BB571EB0120 /* SwiftyJSON.release.xcconfig */;
+			baseConfigurationReference = 4630622BC5027F4749EEC719F2E33F37 /* SwiftyJSON.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -540,31 +374,7 @@
 			};
 			name = Release;
 		};
-		3F25AC5DEB6DB81957FC79FA487F0192 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09559903560D5604EE036263BBB4985F /* Pods-BestApps.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BestApps/Pods-BestApps.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4C1FA8DBF688EB488B17A27748D1E343 /* Release */ = {
+		8657B973DEABB61372F883F5DC89C5E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 321553B7E6FB32F83DFBCBFA19EC8E96 /* Pods-BestApps.release.xcconfig */;
 			buildSettings = {
@@ -591,7 +401,7 @@
 		};
 		8BFDD56294AFB326B4E466180103D65E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 317F9D5D1B6C4398DCAE70008295671E /* SwiftyJSON.debug.xcconfig */;
+			baseConfigurationReference = 8ABC361C64A96E868EBC2D0F5716757F /* SwiftyJSON.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -679,29 +489,26 @@
 			};
 			name = Debug;
 		};
-		FF0BB5DDA6302A76030238C70EA58A20 /* Debug */ = {
+		F2EFCFDA2BA02178647FEFCAE07E5D41 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F36BAC308523A35638BBFAF26E5E3534 /* KFSwiftImageLoader.debug.xcconfig */;
+			baseConfigurationReference = 09559903560D5604EE036263BBB4985F /* Pods-BestApps.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KFSwiftImageLoader/KFSwiftImageLoader-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = Headers/Public/KFSwiftImageLoader/KFSwiftImageLoader.modulemap;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BestApps/Pods-BestApps.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KFSwiftImageLoader;
-				PRODUCT_NAME = KFSwiftImageLoader;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -709,15 +516,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EA0DB17274D7498A2129325C5FA8126 /* Build configuration list for PBXNativeTarget "KFSwiftImageLoader" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FF0BB5DDA6302A76030238C70EA58A20 /* Debug */,
-				051C4E9ED9525770960D5D434883E891 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4544F6920A3F89A0F651EE9A0CA301D5 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -736,11 +534,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3270680B899F04379B8C1EC6AC78616 /* Build configuration list for PBXNativeTarget "Pods-BestApps" */ = {
+		B97F3C64641E8414F8735044EDFB71CB /* Build configuration list for PBXNativeTarget "Pods-BestApps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F25AC5DEB6DB81957FC79FA487F0192 /* Debug */,
-				4C1FA8DBF688EB488B17A27748D1E343 /* Release */,
+				F2EFCFDA2BA02178647FEFCAE07E5D41 /* Debug */,
+				8657B973DEABB61372F883F5DC89C5E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

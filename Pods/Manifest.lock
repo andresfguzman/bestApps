@@ -1,20 +1,16 @@
 PODS:
-  - KFSwiftImageLoader (4.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - KFSwiftImageLoader
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
-    - KFSwiftImageLoader
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  KFSwiftImageLoader: f6edb1af1c9ed23906509d4db7e00edc1086228b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 2a866fd5e0c668718118fd817837efc712702d4c
+PODFILE CHECKSUM: 57d2c18c1fb3dd2a386042d293627e8ce65109b0
 
 COCOAPODS: 1.9.1

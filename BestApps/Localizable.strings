@@ -14,3 +14,4 @@
 
 "AppDetails.price" = "Precio: %@";
 "AppDetails.freeApp" = "Gratuita";
+"AppDetails.linkURL" = "Abrir en App Store";
