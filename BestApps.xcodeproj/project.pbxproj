@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68CF7B8B9F2464AF33C0E930 /* libPods-BestApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF65226B904676B7892285AB /* libPods-BestApps.a */; };
 		7E059066246710060079F9CF /* CategoryListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E059065246710060079F9CF /* CategoryListProtocols.swift */; };
 		7E059068246712E60079F9CF /* CategoryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E059067246712E60079F9CF /* CategoryListPresenter.swift */; };
 		7E05906A2467165B0079F9CF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0590692467165B0079F9CF /* BaseViewController.swift */; };
@@ -30,6 +29,7 @@
 		7E0590A32467697D0079F9CF /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E0590A22467697D0079F9CF /* CategoryTableViewCell.xib */; };
 		7E23D499246BA2E200907780 /* URLSession+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23D498246BA2E200907780 /* URLSession+Result.swift */; };
 		7E23D49B246BA5FC00907780 /* UIImageView+LoadFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23D49A246BA5FC00907780 /* UIImageView+LoadFromURL.swift */; };
+		7E23D49D246BA93D00907780 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23D49C246BA93D00907780 /* Payload.swift */; };
 		7E8941AA1C6C03BB00FF1B6B /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */; };
 		7E8941AD1C6C03E900FF1B6B /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941AC1C6C03E900FF1B6B /* CategoryTableViewCell.swift */; };
 		7E8941B11C6C0F7F00FF1B6B /* AppsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8941B01C6C0F7F00FF1B6B /* AppsView.storyboard */; };
@@ -76,6 +76,7 @@
 		7E0590A22467697D0079F9CF /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		7E23D498246BA2E200907780 /* URLSession+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Result.swift"; sourceTree = "<group>"; };
 		7E23D49A246BA5FC00907780 /* UIImageView+LoadFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadFromURL.swift"; sourceTree = "<group>"; };
+		7E23D49C246BA93D00907780 /* Payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
 		7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		7E8941AC1C6C03E900FF1B6B /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		7E8941B01C6C0F7F00FF1B6B /* AppsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppsView.storyboard; sourceTree = "<group>"; };
@@ -99,9 +100,6 @@
 		7EA2592A1C6ABB7500906FD4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7EA2592B1C6ABB7500906FD4 /* App+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "App+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7EA2592C1C6ABB7500906FD4 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		AF65226B904676B7892285AB /* libPods-BestApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BestApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B75DE8C11915D404F2E90FEF /* Pods-BestApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestApps.debug.xcconfig"; path = "Target Support Files/Pods-BestApps/Pods-BestApps.debug.xcconfig"; sourceTree = "<group>"; };
-		FA5147D66178E5329F113056 /* Pods-BestApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestApps.release.xcconfig"; path = "Target Support Files/Pods-BestApps/Pods-BestApps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,26 +107,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68CF7B8B9F2464AF33C0E930 /* libPods-BestApps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3587D5D8A29AA75FA51323F3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AF65226B904676B7892285AB /* libPods-BestApps.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3668DDAB6715774446F2EA11 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B75DE8C11915D404F2E90FEF /* Pods-BestApps.debug.xcconfig */,
-				FA5147D66178E5329F113056 /* Pods-BestApps.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -203,6 +190,7 @@
 		7E05906F246722ED0079F9CF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7E05909A24674B900079F9CF /* Environment.swift */,
 				7E059070246722F90079F9CF /* Storyboard.swift */,
 			);
 			name = Utils;
@@ -213,6 +201,7 @@
 			children = (
 				7E059078246727E90079F9CF /* SplashProtocols.swift */,
 				7E059077246727890079F9CF /* Router */,
+				7E23D49E246BA94100907780 /* Entity */,
 				7E0590752467277C0079F9CF /* Presenter */,
 				7E059074246727750079F9CF /* Interactor */,
 				7E0590732467276F0079F9CF /* View */,
@@ -368,6 +357,14 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		7E23D49E246BA94100907780 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7E23D49C246BA93D00907780 /* Payload.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		7E8941AB1C6C03D300FF1B6B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,7 +381,6 @@
 				7EA258FD1C6AA9C200906FD4 /* BestApps */,
 				7EA258FC1C6AA9C200906FD4 /* Products */,
 				3668DDAB6715774446F2EA11 /* Pods */,
-				3587D5D8A29AA75FA51323F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -401,6 +397,7 @@
 			children = (
 				7EA258FE1C6AA9C200906FD4 /* AppDelegate.swift */,
 				7EA2590D1C6AA9C300906FD4 /* Info.plist */,
+				7EA259051C6AA9C300906FD4 /* BestApps.xcdatamodeld */,
 				7E05909F24674F3C0079F9CF /* Assets */,
 				7E05909C24674C900079F9CF /* Extensions */,
 				7EA259191C6AB12300906FD4 /* Helpers */,
@@ -408,7 +405,6 @@
 				7EA259181C6AACE400906FD4 /* SharedViews */,
 				7EA259151C6AAA2100906FD4 /* Storyboards */,
 				7E05906F246722ED0079F9CF /* Utils */,
-				7EA259051C6AA9C300906FD4 /* BestApps.xcdatamodeld */,
 			);
 			path = BestApps;
 			sourceTree = "<group>";
@@ -437,7 +433,6 @@
 			children = (
 				7EA2591A1C6AB13500906FD4 /* DBHelper.swift */,
 				7EA2591C1C6AB14E00906FD4 /* GlobalClass.swift */,
-				7E05909A24674B900079F9CF /* Environment.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -449,7 +444,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EA259101C6AA9C300906FD4 /* Build configuration list for PBXNativeTarget "BestApps" */;
 			buildPhases = (
-				E8FEA2FC636FA93DE62BAB8C /* [CP] Check Pods Manifest.lock */,
 				7EA258F71C6AA9C200906FD4 /* Sources */,
 				7EA258F81C6AA9C200906FD4 /* Frameworks */,
 				7EA258F91C6AA9C200906FD4 /* Resources */,
@@ -515,31 +509,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		E8FEA2FC636FA93DE62BAB8C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BestApps-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		7EA258F71C6AA9C200906FD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -571,6 +540,7 @@
 				7EA259171C6AACE000906FD4 /* SplashViewController.swift in Sources */,
 				7E05906C246716BB0079F9CF /* CategoryListInteractor.swift in Sources */,
 				7E059066246710060079F9CF /* CategoryListProtocols.swift in Sources */,
+				7E23D49D246BA93D00907780 /* Payload.swift in Sources */,
 				7EA2591D1C6AB14E00906FD4 /* GlobalClass.swift in Sources */,
 				7EA2592E1C6ABB7500906FD4 /* Category.swift in Sources */,
 				7E05907D24672A8C0079F9CF /* SplashInteractor.swift in Sources */,
@@ -608,7 +578,6 @@
 /* Begin XCBuildConfiguration section */
 		7EA2590E1C6AA9C300906FD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75DE8C11915D404F2E90FEF /* Pods-BestApps.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -666,7 +635,6 @@
 		};
 		7EA2590F1C6AA9C300906FD4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA5147D66178E5329F113056 /* Pods-BestApps.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -718,7 +686,6 @@
 		};
 		7EA259111C6AA9C300906FD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75DE8C11915D404F2E90FEF /* Pods-BestApps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WYWUC4P4DY;
@@ -731,7 +698,6 @@
 		};
 		7EA259121C6AA9C300906FD4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA5147D66178E5329F113056 /* Pods-BestApps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WYWUC4P4DY;

@@ -28,11 +28,11 @@ class GlobalClass: NSObject {
             switch result {
             case .success(let( _, data)):
                 do {
-                    let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+                    let feedObject = try JSONDecoder().decode(Payload.self, from: data)
                     // TODO: move this logic somewhere else.
                     DispatchQueue.main.async {
                         let myDB = DBHelper.Instance
-                        myDB.saveAllData(rawJsonData: jsonObject as AnyObject)
+                        myDB.save(feedObject)
                         closure(.success)
                     }
                 } catch {

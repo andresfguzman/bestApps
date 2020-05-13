@@ -6,5 +6,4 @@ target 'BestApps' do
   # use_frameworks!
 
   # Pods for BestApps
-  pod 'SwiftyJSON',:modular_headers => true
 end
