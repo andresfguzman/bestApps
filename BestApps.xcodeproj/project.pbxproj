@@ -48,7 +48,7 @@
 		7EA2590C1C6AA9C300906FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2590A1C6AA9C300906FD4 /* LaunchScreen.storyboard */; };
 		7EA259171C6AACE000906FD4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA259161C6AACE000906FD4 /* SplashViewController.swift */; };
 		7EA2591B1C6AB13500906FD4 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2591A1C6AB13500906FD4 /* DBHelper.swift */; };
-		7EA2591D1C6AB14E00906FD4 /* GlobalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2591C1C6AB14E00906FD4 /* GlobalClass.swift */; };
+		7EA2591D1C6AB14E00906FD4 /* ServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2591C1C6AB14E00906FD4 /* ServiceAdapter.swift */; };
 		7EA2591F1C6AB1B500906FD4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2591E1C6AB1B500906FD4 /* Localizable.strings */; };
 		7EA2592D1C6ABB7500906FD4 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA259291C6ABB7500906FD4 /* Category+CoreDataProperties.swift */; };
 		7EA2592E1C6ABB7500906FD4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2592A1C6ABB7500906FD4 /* Category.swift */; };
@@ -100,7 +100,7 @@
 		7EA2590D1C6AA9C300906FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA259161C6AACE000906FD4 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7EA2591A1C6AB13500906FD4 /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
-		7EA2591C1C6AB14E00906FD4 /* GlobalClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalClass.swift; sourceTree = "<group>"; };
+		7EA2591C1C6AB14E00906FD4 /* ServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAdapter.swift; sourceTree = "<group>"; };
 		7EA2591E1C6AB1B500906FD4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7EA259291C6ABB7500906FD4 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7EA2592A1C6ABB7500906FD4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -432,6 +432,7 @@
 				7E05909C24674C900079F9CF /* Extensions */,
 				7EA259191C6AB12300906FD4 /* Helpers */,
 				7E05905E24670FA10079F9CF /* Modules */,
+				7EC42F2424710902003CE363 /* Networking */,
 				7EA259181C6AACE400906FD4 /* SharedViews */,
 				7EA259151C6AAA2100906FD4 /* Storyboards */,
 				7E05906F246722ED0079F9CF /* Utils */,
@@ -462,9 +463,16 @@
 			isa = PBXGroup;
 			children = (
 				7EA2591A1C6AB13500906FD4 /* DBHelper.swift */,
-				7EA2591C1C6AB14E00906FD4 /* GlobalClass.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7EC42F2424710902003CE363 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7EA2591C1C6AB14E00906FD4 /* ServiceAdapter.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -618,7 +626,7 @@
 				7E05906C246716BB0079F9CF /* CategoryListInteractor.swift in Sources */,
 				7E059066246710060079F9CF /* CategoryListProtocols.swift in Sources */,
 				7E23D49D246BA93D00907780 /* Payload.swift in Sources */,
-				7EA2591D1C6AB14E00906FD4 /* GlobalClass.swift in Sources */,
+				7EA2591D1C6AB14E00906FD4 /* ServiceAdapter.swift in Sources */,
 				7EA2592E1C6ABB7500906FD4 /* Category.swift in Sources */,
 				7E05907D24672A8C0079F9CF /* SplashInteractor.swift in Sources */,
 				7E8941AD1C6C03E900FF1B6B /* CategoryTableViewCell.swift in Sources */,

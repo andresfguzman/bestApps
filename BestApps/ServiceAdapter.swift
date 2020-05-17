@@ -15,16 +15,19 @@ enum ServiceResult {
 
 typealias ServiceResponse = (ServiceResult) -> Void
 
-class GlobalClass: NSObject {
+protocol AppStoreFeedNetworking {
+    func getFeed(with completion: @escaping ServiceResponse)
+}
 
-    static let Instance = GlobalClass()
+class ServiceAdapter: AppStoreFeedNetworking {
+    static let Instance = ServiceAdapter()
     
     enum ServiceError: Error {
         case failed
     }
     
-    func obtainMainService(with closure: @escaping ServiceResponse) {
-        let mainTask = URLSession.shared.dataTask(with: URL(string: Environment.apiURL)!) { (result) in
+    func getFeed(with completion: @escaping ServiceResponse) {
+        URLSession.shared.dataTask(with: URL(string: Environment.apiURL)!) { (result) in
             switch result {
             case .success(let( _, data)):
                 do {
@@ -33,17 +36,15 @@ class GlobalClass: NSObject {
                     DispatchQueue.main.async {
                         let myDB = DBHelper.Instance
                         myDB.save(feedObject)
-                        closure(.success)
+                        completion(.success)
                     }
                 } catch {
                     print("Failed to load: \(error.localizedDescription)")
-                    closure(.failure(error: error))
+                    completion(.failure(error: error))
                 }
             case .failure(let error):
-                closure(.failure(error: error))
+                completion(.failure(error: error))
             }
-        }
-        
-        mainTask.resume()
+        }.resume()
     }
 }
