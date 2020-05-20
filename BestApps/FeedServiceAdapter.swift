@@ -8,26 +8,19 @@
 
 import Foundation
 
-enum ServiceResult {
-    case success
-    case failure(error: Error)
+protocol FeedService: BestAppsService {
+    func getFeed(completion: @escaping BestAppResponse)
 }
 
-typealias ServiceResponse = (ServiceResult) -> Void
-
-protocol AppStoreFeedNetworking {
-    func getFeed(with completion: @escaping ServiceResponse)
-}
-
-class ServiceAdapter: AppStoreFeedNetworking {
-    static let Instance = ServiceAdapter()
+class FeedServiceAdapter: FeedService {
+    var endpoint: String = Environment.apiURL
     
     enum ServiceError: Error {
         case failed
     }
     
-    func getFeed(with completion: @escaping ServiceResponse) {
-        URLSession.shared.dataTask(with: URL(string: Environment.apiURL)!) { (result) in
+    func getFeed(completion: @escaping BestAppResponse) {
+        request { (result) in
             switch result {
             case .success(let( _, data)):
                 do {
@@ -45,6 +38,6 @@ class ServiceAdapter: AppStoreFeedNetworking {
             case .failure(let error):
                 completion(.failure(error: error))
             }
-        }.resume()
+        }
     }
 }

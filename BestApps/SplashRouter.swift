@@ -15,7 +15,7 @@ final class SplashRouter: SplashRouterProtocol {
         let ref = SplashViewController.instantiate(from: .mainMenu)
         let presenter: SplashPresenter & SplashInteractorOutput = SplashPresenter()
         
-        let interactor = SplashInteractor()
+        let interactor = SplashInteractor(service: FeedServiceAdapter())
         interactor.presenter = presenter
         
         let router = SplashRouter()

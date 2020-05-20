@@ -33,6 +33,7 @@
 		7E23D49D246BA93D00907780 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23D49C246BA93D00907780 /* Payload.swift */; };
 		7E23D4A0246BBC8E00907780 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23D49F246BBC8E00907780 /* AppDelegate+CoreData.swift */; };
 		7E23D4B1246BC90A00907780 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E23D4B0246BC90A00907780 /* Splash.json */; };
+		7E2F900D2474E9E5006733D6 /* BestAppsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2F900C2474E9E5006733D6 /* BestAppsService.swift */; };
 		7E8941AA1C6C03BB00FF1B6B /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */; };
 		7E8941AD1C6C03E900FF1B6B /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8941AC1C6C03E900FF1B6B /* CategoryTableViewCell.swift */; };
 		7E8941B11C6C0F7F00FF1B6B /* AppsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8941B01C6C0F7F00FF1B6B /* AppsView.storyboard */; };
@@ -48,7 +49,7 @@
 		7EA2590C1C6AA9C300906FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2590A1C6AA9C300906FD4 /* LaunchScreen.storyboard */; };
 		7EA259171C6AACE000906FD4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA259161C6AACE000906FD4 /* SplashViewController.swift */; };
 		7EA2591B1C6AB13500906FD4 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2591A1C6AB13500906FD4 /* DBHelper.swift */; };
-		7EA2591D1C6AB14E00906FD4 /* ServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2591C1C6AB14E00906FD4 /* ServiceAdapter.swift */; };
+		7EA2591D1C6AB14E00906FD4 /* FeedServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2591C1C6AB14E00906FD4 /* FeedServiceAdapter.swift */; };
 		7EA2591F1C6AB1B500906FD4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2591E1C6AB1B500906FD4 /* Localizable.strings */; };
 		7EA2592D1C6ABB7500906FD4 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA259291C6ABB7500906FD4 /* Category+CoreDataProperties.swift */; };
 		7EA2592E1C6ABB7500906FD4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2592A1C6ABB7500906FD4 /* Category.swift */; };
@@ -83,6 +84,7 @@
 		7E23D49C246BA93D00907780 /* Payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
 		7E23D49F246BBC8E00907780 /* AppDelegate+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CoreData.swift"; sourceTree = "<group>"; };
 		7E23D4B0246BC90A00907780 /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
+		7E2F900C2474E9E5006733D6 /* BestAppsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestAppsService.swift; sourceTree = "<group>"; };
 		7E8941A91C6C03BB00FF1B6B /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		7E8941AC1C6C03E900FF1B6B /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		7E8941B01C6C0F7F00FF1B6B /* AppsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppsView.storyboard; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 		7EA2590D1C6AA9C300906FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA259161C6AACE000906FD4 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7EA2591A1C6AB13500906FD4 /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
-		7EA2591C1C6AB14E00906FD4 /* ServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAdapter.swift; sourceTree = "<group>"; };
+		7EA2591C1C6AB14E00906FD4 /* FeedServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedServiceAdapter.swift; sourceTree = "<group>"; };
 		7EA2591E1C6AB1B500906FD4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7EA259291C6ABB7500906FD4 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7EA2592A1C6ABB7500906FD4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -393,6 +395,13 @@
 			name = Lottie;
 			sourceTree = "<group>";
 		};
+		7E2F900E2474EB3C006733D6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
 		7E8941AB1C6C03D300FF1B6B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +442,7 @@
 				7EA259191C6AB12300906FD4 /* Helpers */,
 				7E05905E24670FA10079F9CF /* Modules */,
 				7EC42F2424710902003CE363 /* Networking */,
+				7E2F900E2474EB3C006733D6 /* Repositories */,
 				7EA259181C6AACE400906FD4 /* SharedViews */,
 				7EA259151C6AAA2100906FD4 /* Storyboards */,
 				7E05906F246722ED0079F9CF /* Utils */,
@@ -470,7 +480,8 @@
 		7EC42F2424710902003CE363 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				7EA2591C1C6AB14E00906FD4 /* ServiceAdapter.swift */,
+				7E2F900C2474E9E5006733D6 /* BestAppsService.swift */,
+				7EA2591C1C6AB14E00906FD4 /* FeedServiceAdapter.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -613,6 +624,7 @@
 				7E05906A2467165B0079F9CF /* BaseViewController.swift in Sources */,
 				7EA259301C6ABB7500906FD4 /* App.swift in Sources */,
 				7E059099246744490079F9CF /* AppDetailsRouter.swift in Sources */,
+				7E2F900D2474E9E5006733D6 /* BestAppsService.swift in Sources */,
 				7E05907F24672EDD0079F9CF /* SplashRouter.swift in Sources */,
 				7E05908D24673B590079F9CF /* AppListRouter.swift in Sources */,
 				7E8941AA1C6C03BB00FF1B6B /* CategoryTableViewController.swift in Sources */,
@@ -626,7 +638,7 @@
 				7E05906C246716BB0079F9CF /* CategoryListInteractor.swift in Sources */,
 				7E059066246710060079F9CF /* CategoryListProtocols.swift in Sources */,
 				7E23D49D246BA93D00907780 /* Payload.swift in Sources */,
-				7EA2591D1C6AB14E00906FD4 /* ServiceAdapter.swift in Sources */,
+				7EA2591D1C6AB14E00906FD4 /* FeedServiceAdapter.swift in Sources */,
 				7EA2592E1C6ABB7500906FD4 /* Category.swift in Sources */,
 				7E05907D24672A8C0079F9CF /* SplashInteractor.swift in Sources */,
 				7E8941AD1C6C03E900FF1B6B /* CategoryTableViewCell.swift in Sources */,

@@ -22,6 +22,7 @@ protocol SplashPresenterProtocol: AnyObject {
 
 protocol SplashInteractorProtocol: AnyObject {
     var presenter: SplashInteractorOutput! { get set }
+    var service: BestAppsService { get set }
     func getData()
 }
 
