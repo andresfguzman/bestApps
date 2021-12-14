@@ -32,11 +32,15 @@ class FeedServiceAdapter: FeedService {
                         completion(.success)
                     }
                 } catch {
-                    print("Failed to load: \(error.localizedDescription)")
-                    completion(.failure(error: error))
+                    DispatchQueue.main.async {
+                        print("Failed to load: \(error.localizedDescription)")
+                        completion(.failure(error: error))
+                    }
                 }
             case .failure(let error):
-                completion(.failure(error: error))
+                DispatchQueue.main.async {
+                    completion(.failure(error: error))
+                }
             }
         }
     }

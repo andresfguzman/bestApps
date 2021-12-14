@@ -8,14 +8,17 @@
 
 import UIKit
 
-class AppCollectionViewCell: UICollectionViewCell {
+final class AppCollectionViewCell: UICollectionViewCell {
     
     var textLabel: UILabel!
     var imageView: UIImageView!
     
+    override var reuseIdentifier: String? {
+        String(describing: AppCollectionViewCell.self)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1)
         imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = UIView.ContentMode.scaleToFill

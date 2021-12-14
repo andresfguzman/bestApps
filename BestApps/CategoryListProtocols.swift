@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum Device {
-    case ipad
-    case iphone
-}
-
 protocol CategoryListView: AnyObject {
     var presenter: CategoryListPresenterProtocol! { get set }
 }

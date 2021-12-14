@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.overrideUserInterfaceStyle = .light
         }
         #endif
-        let vc = SplashRouter.buildModule()
+        let vc = ModuleBuilder.buildSplash()
         let navController = UINavigationController(rootViewController: vc)
         setRoot(with: navController)
         
@@ -74,7 +74,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setRoot(with viewController: UIViewController) {
-//        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }

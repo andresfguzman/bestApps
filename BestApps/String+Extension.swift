@@ -9,6 +9,8 @@
 import Foundation
 
 extension String {
+    static var empty = ""
+    
     var localized: String {
         return NSLocalizedString(self, comment: "BEST APP STRING")
     }

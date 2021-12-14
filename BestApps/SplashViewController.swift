@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 
 class SplashViewController: BaseViewController, SplashView {
-    var loaderView: AnimationView!
+    weak private var loaderView: AnimationView!
     var presenter: SplashPresenterProtocol!
     
     // MARK: OVERRIDE METHODS
