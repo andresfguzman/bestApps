@@ -61,9 +61,9 @@ final class PopUpAnimation: NSObject, UIViewControllerAnimatedTransitioning {
         
         UIView.animate(
             withDuration: duration,
-            delay: 0.0,
-            usingSpringWithDamping: 0.4,
-            initialSpringVelocity: 0.1,
+            delay: .zero,
+            usingSpringWithDamping: 0.6,
+            initialSpringVelocity: 0.5,
             animations: {
                 if !self.presenting {
                     let imageView = UIImageView(frame: transitionContext.containerView.bounds)

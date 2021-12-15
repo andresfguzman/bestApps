@@ -59,6 +59,7 @@
 		7EF1D8162768584A00B213E8 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D8152768584A00B213E8 /* UIView+Utils.swift */; };
 		7EF1D818276910B900B213E8 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D817276910B900B213E8 /* UIImage+Utils.swift */; };
 		7EF1D81A2769128800B213E8 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D8192769128800B213E8 /* ModuleBuilder.swift */; };
+		7EF1D81C2769691600B213E8 /* TransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D81B2769691600B213E8 /* TransitionCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		7EF1D8152768584A00B213E8 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		7EF1D817276910B900B213E8 /* UIImage+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
 		7EF1D8192769128800B213E8 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		7EF1D81B2769691600B213E8 /* TransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCoordinator.swift; sourceTree = "<group>"; };
 		7F7FFF33BB5F4781AEDA803B /* Pods_BestApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B3F12603843E3D444D9622 /* Pods-BestApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestApps.debug.xcconfig"; path = "Target Support Files/Pods-BestApps/Pods-BestApps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -477,6 +479,7 @@
 			children = (
 				7EA2591A1C6AB13500906FD4 /* DBHelper.swift */,
 				7EDC862C2767CDC100B03EB6 /* PopUpAnimation.swift */,
+				7EF1D81B2769691600B213E8 /* TransitionCoordinator.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				7EF1D81A2769128800B213E8 /* ModuleBuilder.swift in Sources */,
 				7E059071246722F90079F9CF /* Storyboard.swift in Sources */,
 				7EF1D818276910B900B213E8 /* UIImage+Utils.swift in Sources */,
+				7EF1D81C2769691600B213E8 /* TransitionCoordinator.swift in Sources */,
 				7E059087246738140079F9CF /* AppListProtocols.swift in Sources */,
 				7EA259071C6AA9C300906FD4 /* BestApps.xcdatamodeld in Sources */,
 				7E05906A2467165B0079F9CF /* BaseViewController.swift in Sources */,

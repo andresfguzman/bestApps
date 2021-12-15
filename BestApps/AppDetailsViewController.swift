@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class AppDetailsViewController: BaseViewController, AppDetailsView {
+final class AppDetailsViewController: RadialAnimatedViewController, AppDetailsView {
 
     var presenter: AppDetailsPresenterProtocol!
     
@@ -19,6 +19,8 @@ final class AppDetailsViewController: BaseViewController, AppDetailsView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        triggerView = firstPhoto
+        cosmeticView = appDescription
         presenter.viewDidLoad()
     }
     
@@ -27,6 +29,7 @@ final class AppDetailsViewController: BaseViewController, AppDetailsView {
         firstPhoto.load(from: model.app_image2 ?? .empty)
         appDescription.text = model.app_summary
         buttonUrl.setTitle("AppDetails.linkURL".localized, for: .normal)
+        firstPhoto.roundCorners(corners: [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner])
         
         if Double(model.app_price ?? .empty) == .zero {
             appPrice.text = String(format: "AppDetails.price".localized, "AppDetails.freeApp".localized)

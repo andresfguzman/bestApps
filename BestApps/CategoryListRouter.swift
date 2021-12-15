@@ -10,12 +10,14 @@ import UIKit
 
 final class CategoryListRouter: CategoryListRouterProtocol {
     var viewController: UIViewController!
+    let transCoordinator = TransitionCoordinator()
     
     func goToAppList(with category: Category) {
         let vc = ModuleBuilder.buildAppListModule(with: category)
         let navController = UINavigationController(rootViewController: vc)
         navController.transitioningDelegate = (viewController as? UIViewControllerTransitioningDelegate)
         navController.modalPresentationStyle = .fullScreen
+        navController.delegate = transCoordinator
         viewController.present(navController, animated: true, completion: nil)
     }
 }

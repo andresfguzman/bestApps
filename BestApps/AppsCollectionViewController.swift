@@ -8,9 +8,24 @@
 
 import UIKit
 
-final class AppsCollectionViewController: BaseViewController, AppListView {
+class RadialAnimatedViewController: BaseViewController, CircleTransitionable {
+    var triggerView: UIView = UIView()
+    var cosmeticView: UIView = UIView()
+    var mainView: UIView { view }
+}
+
+final class AppsCollectionViewController: RadialAnimatedViewController, AppListView {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var headerImageView: UIImageView!
+    
+    override var cosmeticView: UIView {
+        get {
+            return collectionView
+        }
+        set {
+            // DO NOTHING
+        }
+    }
     
     // MARK: VARIABLES
     var presenter: AppListPresenterProtocol!
@@ -28,7 +43,6 @@ final class AppsCollectionViewController: BaseViewController, AppListView {
         // Register cell classes
         self.collectionView!.register(AppCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: AppCollectionViewCell.self))
     }
-    
     
     @objc private func dismissVC() {
         dismiss(animated: true, completion: nil)
@@ -66,6 +80,7 @@ extension AppsCollectionViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        triggerView = collectionView.cellForItem(at: indexPath) ?? UIView()
         self.presenter.didSelectItem(at: indexPath.item)
     }
     
@@ -74,7 +89,13 @@ extension AppsCollectionViewController: UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: AppCollectionViewCell.self), for: indexPath) as! AppCollectionViewCell
         cell.imageView.load(from: appAtIndex.app_image2 ?? .empty)
-        cell.textLabel.text = appAtIndex.app_name
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.transform = CGAffineTransform(scaleX: .zero, y: .zero)
+        UIView.animate(withDuration: 0.20, delay: 0.1, options: .curveEaseIn) {
+            cell.transform = .identity
+        }
     }
 }
