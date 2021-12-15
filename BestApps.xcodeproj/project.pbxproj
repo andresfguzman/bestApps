@@ -60,6 +60,8 @@
 		7EF1D818276910B900B213E8 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D817276910B900B213E8 /* UIImage+Utils.swift */; };
 		7EF1D81A2769128800B213E8 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D8192769128800B213E8 /* ModuleBuilder.swift */; };
 		7EF1D81C2769691600B213E8 /* TransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D81B2769691600B213E8 /* TransitionCoordinator.swift */; };
+		7EF1D81F276984DD00B213E8 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D81E276984DD00B213E8 /* CircularTransition.swift */; };
+		7EF1D8212769856F00B213E8 /* RadialAnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D8202769856F00B213E8 /* RadialAnimatedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +120,8 @@
 		7EF1D817276910B900B213E8 /* UIImage+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
 		7EF1D8192769128800B213E8 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		7EF1D81B2769691600B213E8 /* TransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCoordinator.swift; sourceTree = "<group>"; };
+		7EF1D81E276984DD00B213E8 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		7EF1D8202769856F00B213E8 /* RadialAnimatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialAnimatedViewController.swift; sourceTree = "<group>"; };
 		7F7FFF33BB5F4781AEDA803B /* Pods_BestApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B3F12603843E3D444D9622 /* Pods-BestApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestApps.debug.xcconfig"; path = "Target Support Files/Pods-BestApps/Pods-BestApps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +158,7 @@
 		7E05905E24670FA10079F9CF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7EA259151C6AAA2100906FD4 /* Storyboards */,
 				7EF1D8192769128800B213E8 /* ModuleBuilder.swift */,
 				7E059093246741950079F9CF /* BaseModule */,
 				7E059072246727650079F9CF /* Splash */,
@@ -221,6 +226,8 @@
 		7E05906F246722ED0079F9CF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7EF1D81D276984C900B213E8 /* AnimationManagers */,
+				7EA259181C6AACE400906FD4 /* SharedViews */,
 				7E05909A24674B900079F9CF /* Environment.swift */,
 				7E059070246722F90079F9CF /* Storyboard.swift */,
 			);
@@ -365,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				7E0590692467165B0079F9CF /* BaseViewController.swift */,
+				7EF1D8202769856F00B213E8 /* RadialAnimatedViewController.swift */,
 			);
 			name = BaseModule;
 			sourceTree = "<group>";
@@ -444,12 +452,9 @@
 				7EA2590D1C6AA9C300906FD4 /* Info.plist */,
 				7EA259051C6AA9C300906FD4 /* BestApps.xcdatamodeld */,
 				7E05909F24674F3C0079F9CF /* Assets */,
-				7E05909C24674C900079F9CF /* Extensions */,
-				7EA259191C6AB12300906FD4 /* Helpers */,
 				7E05905E24670FA10079F9CF /* Modules */,
-				7EC42F2424710902003CE363 /* Networking */,
-				7EA259181C6AACE400906FD4 /* SharedViews */,
-				7EA259151C6AAA2100906FD4 /* Storyboards */,
+				7E05909C24674C900079F9CF /* Extensions */,
+				7EA259191C6AB12300906FD4 /* Core */,
 				7E05906F246722ED0079F9CF /* Utils */,
 			);
 			path = BestApps;
@@ -474,14 +479,13 @@
 			name = SharedViews;
 			sourceTree = "<group>";
 		};
-		7EA259191C6AB12300906FD4 /* Helpers */ = {
+		7EA259191C6AB12300906FD4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7EC42F2424710902003CE363 /* Networking */,
 				7EA2591A1C6AB13500906FD4 /* DBHelper.swift */,
-				7EDC862C2767CDC100B03EB6 /* PopUpAnimation.swift */,
-				7EF1D81B2769691600B213E8 /* TransitionCoordinator.swift */,
 			);
-			name = Helpers;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		7EC42F2424710902003CE363 /* Networking */ = {
@@ -491,6 +495,16 @@
 				7EA2591C1C6AB14E00906FD4 /* FeedServiceAdapter.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		7EF1D81D276984C900B213E8 /* AnimationManagers */ = {
+			isa = PBXGroup;
+			children = (
+				7EF1D81E276984DD00B213E8 /* CircularTransition.swift */,
+				7EDC862C2767CDC100B03EB6 /* PopUpAnimation.swift */,
+				7EF1D81B2769691600B213E8 /* TransitionCoordinator.swift */,
+			);
+			name = AnimationManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,6 +640,7 @@
 				7EA2592F1C6ABB7500906FD4 /* App+CoreDataProperties.swift in Sources */,
 				7EA2592D1C6ABB7500906FD4 /* Category+CoreDataProperties.swift in Sources */,
 				7E05909E24674CA50079F9CF /* String+Extension.swift in Sources */,
+				7EF1D8212769856F00B213E8 /* RadialAnimatedViewController.swift in Sources */,
 				7EF1D81A2769128800B213E8 /* ModuleBuilder.swift in Sources */,
 				7E059071246722F90079F9CF /* Storyboard.swift in Sources */,
 				7EF1D818276910B900B213E8 /* UIImage+Utils.swift in Sources */,
@@ -656,6 +671,7 @@
 				7E8941AD1C6C03E900FF1B6B /* CategoryTableViewCell.swift in Sources */,
 				7E05906E246718630079F9CF /* CategoryListRouter.swift in Sources */,
 				7E8941B51C6C10AE00FF1B6B /* AppCollectionViewCell.swift in Sources */,
+				7EF1D81F276984DD00B213E8 /* CircularTransition.swift in Sources */,
 				7E05907B24672A270079F9CF /* SplashPresenter.swift in Sources */,
 				7E05908B24673A000079F9CF /* AppListInteractor.swift in Sources */,
 				7E23D49B246BA5FC00907780 /* UIImageView+LoadFromURL.swift in Sources */,

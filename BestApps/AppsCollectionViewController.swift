@@ -8,12 +8,6 @@
 
 import UIKit
 
-class RadialAnimatedViewController: BaseViewController, CircleTransitionable {
-    var triggerView: UIView = UIView()
-    var cosmeticView: UIView = UIView()
-    var mainView: UIView { view }
-}
-
 final class AppsCollectionViewController: RadialAnimatedViewController, AppListView {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var headerImageView: UIImageView!
