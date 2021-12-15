@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XA7-vA-tvR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XA7-vA-tvR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,11 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appbg" translatesAutoresizingMaskIntoConstraints="NO" id="gfo-M8-D55">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mQ-Ke-pa6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-Ub-Xg9">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="181"/>
@@ -40,7 +39,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbe-YD-NlO">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbe-YD-NlO">
                                                 <rect key="frame" x="8" y="114.5" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
@@ -78,17 +77,13 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6mQ-Ke-pa6" secondAttribute="trailing" id="88D-ls-iOO"/>
                             <constraint firstItem="6mQ-Ke-pa6" firstAttribute="leading" secondItem="azu-1Q-tDK" secondAttribute="leading" id="DlX-c8-5zH"/>
-                            <constraint firstAttribute="trailing" secondItem="gfo-M8-D55" secondAttribute="trailing" id="EBY-5n-et5"/>
                             <constraint firstItem="QaJ-Ub-Xg9" firstAttribute="width" secondItem="azu-1Q-tDK" secondAttribute="width" id="F34-hb-LrJ"/>
                             <constraint firstItem="6mQ-Ke-pa6" firstAttribute="top" secondItem="Ktj-ON-41e" secondAttribute="bottom" id="ODX-M4-psU"/>
-                            <constraint firstItem="gfo-M8-D55" firstAttribute="height" secondItem="azu-1Q-tDK" secondAttribute="height" id="hMl-Ut-peI"/>
-                            <constraint firstItem="gfo-M8-D55" firstAttribute="centerY" secondItem="azu-1Q-tDK" secondAttribute="centerY" id="jwF-x6-95A"/>
-                            <constraint firstItem="6mQ-Ke-pa6" firstAttribute="bottom" secondItem="gfo-M8-D55" secondAttribute="bottom" id="k6g-XY-Iqg"/>
-                            <constraint firstItem="gfo-M8-D55" firstAttribute="leading" secondItem="azu-1Q-tDK" secondAttribute="leading" id="owq-YQ-FV7"/>
+                            <constraint firstItem="owJ-uP-h1x" firstAttribute="top" secondItem="6mQ-Ke-pa6" secondAttribute="bottom" id="cRa-If-zSf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -104,6 +99,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appbg" width="347" height="600"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

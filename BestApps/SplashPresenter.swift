@@ -21,7 +21,7 @@ final class SplashPresenter: SplashPresenterProtocol {
 extension SplashPresenter: SplashInteractorOutput {
     
     func getDataSucceeds() {
-        router.goToCategoryList(for: UIDevice.current.userInterfaceIdiom == .pad ? .ipad : .iphone)
+        router.goToCategoryList()
     }
     
     func getDataFails(with error: Error) {

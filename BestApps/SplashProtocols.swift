@@ -11,7 +11,6 @@ import Lottie
 
 protocol SplashView: AnyObject {
     var presenter: SplashPresenterProtocol! { get set }
-    var loaderView: AnimationView! { get set }
 }
 
 protocol SplashPresenterProtocol: AnyObject {
@@ -34,6 +33,6 @@ protocol SplashInteractorOutput: AnyObject {
 
 protocol SplashRouterProtocol: AnyObject {
     var viewController: UIViewController! { get set }
-    func goToCategoryList(for device: Device)
+    func goToCategoryList()
     func routeToError(with message: String)
 }

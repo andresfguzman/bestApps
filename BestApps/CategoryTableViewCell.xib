@@ -1,44 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="90" id="eFS-k0-gY5" customClass="CategoryTableViewCell" customModule="BestApps" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="200" id="eFS-k0-gY5" customClass="CategoryTableViewCell" customModule="BestApps" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eFS-k0-gY5" id="e0J-Ch-Uzv">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eFS-k0-gY5" id="e0J-Ch-Uzv">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="swh-Jg-eNF">
-                        <rect key="frame" x="8" y="8" width="398" height="74"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Games" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-VX-beo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="ula-6s-bRV"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGG-PL-47F">
+                        <rect key="frame" x="0.0" y="150" width="414" height="50"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="games" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-VX-beo">
-                                <rect key="frame" x="0.0" y="9.5" width="55" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="mUY-KJ-Kuh"/>
-                                    <constraint firstAttribute="height" constant="55" id="xro-2z-sJf"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKI-Xb-zMU">
-                                <rect key="frame" x="55" y="27" width="343" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                    </stackView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gKI-Xb-zMU" secondAttribute="trailing" id="RPi-hE-DOo"/>
+                            <constraint firstItem="gKI-Xb-zMU" firstAttribute="top" secondItem="UGG-PL-47F" secondAttribute="top" id="Sc8-oU-zX8"/>
+                            <constraint firstAttribute="bottom" secondItem="gKI-Xb-zMU" secondAttribute="bottom" id="qON-Eo-q75"/>
+                            <constraint firstItem="gKI-Xb-zMU" firstAttribute="leading" secondItem="UGG-PL-47F" secondAttribute="leading" id="sAV-Po-CMx"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="swh-Jg-eNF" secondAttribute="bottom" constant="8" id="EJD-0D-fWq"/>
-                    <constraint firstItem="swh-Jg-eNF" firstAttribute="leading" secondItem="e0J-Ch-Uzv" secondAttribute="leading" constant="8" id="KcR-tf-dPG"/>
-                    <constraint firstItem="swh-Jg-eNF" firstAttribute="top" secondItem="e0J-Ch-Uzv" secondAttribute="top" constant="8" id="lzI-kr-9Py"/>
-                    <constraint firstAttribute="trailing" secondItem="swh-Jg-eNF" secondAttribute="trailing" constant="8" id="piK-Ld-Upw"/>
+                    <constraint firstItem="zsk-VX-beo" firstAttribute="leading" secondItem="e0J-Ch-Uzv" secondAttribute="leading" id="2XU-bJ-Sm6"/>
+                    <constraint firstAttribute="bottom" secondItem="zsk-VX-beo" secondAttribute="bottom" id="M4q-hP-D5Q"/>
+                    <constraint firstItem="UGG-PL-47F" firstAttribute="height" secondItem="e0J-Ch-Uzv" secondAttribute="height" multiplier="0.25" id="UCo-wL-V7F"/>
+                    <constraint firstAttribute="trailing" secondItem="zsk-VX-beo" secondAttribute="trailing" id="VDr-Jd-k1O"/>
+                    <constraint firstItem="UGG-PL-47F" firstAttribute="leading" secondItem="e0J-Ch-Uzv" secondAttribute="leading" id="hZ8-Xl-j0G"/>
+                    <constraint firstItem="zsk-VX-beo" firstAttribute="top" secondItem="e0J-Ch-Uzv" secondAttribute="top" id="piP-kQ-hUF"/>
+                    <constraint firstAttribute="bottom" secondItem="UGG-PL-47F" secondAttribute="bottom" id="sXd-Iz-Z4P"/>
+                    <constraint firstAttribute="trailing" secondItem="UGG-PL-47F" secondAttribute="trailing" id="wyb-Vb-Ftu"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -47,10 +59,16 @@
                 <outlet property="categoryName" destination="gKI-Xb-zMU" id="uf0-VY-XVm"/>
                 <outlet property="contentView" destination="e0J-Ch-Uzv" id="rYJ-Ng-4Ls"/>
             </connections>
-            <point key="canvasLocation" x="836" y="104"/>
+            <point key="canvasLocation" x="834.78260869565224" y="140.625"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="games" width="79.5" height="58.5"/>
+        <image name="Games" width="612" height="792"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

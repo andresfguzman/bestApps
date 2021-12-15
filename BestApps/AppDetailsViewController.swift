@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppDetailsViewController: BaseViewController, AppDetailsView {
+final class AppDetailsViewController: RadialAnimatedViewController, AppDetailsView {
 
     var presenter: AppDetailsPresenterProtocol!
     
@@ -19,18 +19,22 @@ class AppDetailsViewController: BaseViewController, AppDetailsView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        triggerView = firstPhoto
+        cosmeticView = appDescription
         presenter.viewDidLoad()
     }
     
     func setupView(with model: App) {
         self.title = model.app_name
-        firstPhoto.load(from: model.app_image2 ?? "")
+        firstPhoto.load(from: model.app_image2 ?? .empty)
         appDescription.text = model.app_summary
         buttonUrl.setTitle("AppDetails.linkURL".localized, for: .normal)
-        if model.app_price == "0.00000"{
-            appPrice.text = String(format: "AppDetails.price".localized, "Gratuita")
+        firstPhoto.roundCorners(corners: [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+        
+        if Double(model.app_price ?? .empty) == .zero {
+            appPrice.text = String(format: "AppDetails.price".localized, "AppDetails.freeApp".localized)
         } else {
-            appPrice.text = String(format: "AppDetails.price".localized, model.app_price!)
+            appPrice.text = String(format: "AppDetails.price".localized, model.app_price ?? .empty)
         }
     }
     

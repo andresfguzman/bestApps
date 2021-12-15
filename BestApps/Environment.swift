@@ -9,5 +9,5 @@
 import Foundation
 
 enum Environment {
-    static let apiURL = "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json"
+    static let apiURL = "https://itunes.apple.com/us/rss/topfreeapplications/limit=40/json"
 }

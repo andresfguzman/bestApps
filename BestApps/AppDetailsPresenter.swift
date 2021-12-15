@@ -8,8 +8,8 @@
 
 import Foundation
 
-final class AppDetailsPresenter: AppDetailsPresenterProtocol {
-    var view: AppDetailsView!
+final class AppDetailsPresenter: AppDetailsPresenterProtocol, AppDetailsInteractorOutput {
+    weak var view: AppDetailsView!
     var appModel: App!
     var router: AppDetailsRouterProtocol!
     
@@ -25,8 +25,4 @@ final class AppDetailsPresenter: AppDetailsPresenterProtocol {
         guard let appLink = appModel.app_link, let appStoreURL = URL(string: appLink) else { return }
         router.openUrl(with: appStoreURL)
     }
-}
-
-extension AppDetailsPresenter: AppDetailsInteractorOutput {
-    
 }

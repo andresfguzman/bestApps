@@ -8,8 +8,7 @@
 
 import UIKit
 
-class CategoryTableViewCell: UITableViewCell {
-    
+final class CategoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var categoryCellContent: UIView!
     @IBOutlet weak var categoryImage: UIImageView!
@@ -17,15 +16,21 @@ class CategoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        categoryCellContent.layer.cornerRadius = 10
-        categoryCellContent.clipsToBounds = true
+        categoryCellContent.roundCorners(corners: [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner])
         categoryCellContent.layer.borderWidth = 1.0
-        categoryCellContent.layer.borderColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 0.6).cgColor
         selectionStyle = .none
     }
     
     func configure(with model: Category) {
         categoryName.text = model.cat_name
-        categoryImage.image = UIImage(named: model.cat_name!)
+        if let catName = model.cat_name {
+            let shrunkImage = UIImage(named: catName)?.shrink(to: CGSize(width: 400, height: 400))
+            categoryImage.image = shrunkImage
+        }
+    }
+    
+    override func prepareForReuse() {
+        categoryImage.image = nil
+        categoryName.text = String()
     }
 }
